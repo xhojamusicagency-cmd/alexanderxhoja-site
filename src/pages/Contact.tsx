@@ -37,7 +37,7 @@ export default function Contact() {
     try {
       await emailjs.send(
         EMAILJS_CONFIG.SERVICE_ID,
-        EMAILJS_CONFIG.TEMPLATE_ID,
+        EMAILJS_CONFIG.CONTACT_TEMPLATE,
         payload,
         EMAILJS_CONFIG.PUBLIC_KEY
       );
