@@ -100,7 +100,7 @@ export default function Home() {
           </div>
           <div className="relative aspect-video bg-black/40 overflow-hidden shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)]">
             <iframe
-              src="https://www.youtube.com/embed/X3erxpEimGI"
+              src="https://www.youtube.com/embed/7flbo2_Gd64"
               title="Alexander Xhoja — Caravan, Live at Keys Fest 2024"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

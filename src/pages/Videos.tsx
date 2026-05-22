@@ -7,29 +7,53 @@ interface Video {
   context?: string;
 }
 
-// NOTE: Update these YouTube IDs with real ones once Alex confirms the URLs.
-// Placeholder ID below (X3erxpEimGI) is the same one used on the XMA site;
-// swap individually for the actual performances.
+// Real catalog of Alexander Xhoja's YouTube performances.
+// Source: https://www.youtube.com/@alexanderxhoja
 const VIDEOS: Video[] = [
   {
     title: 'Caravan',
     context: 'Live at Keys Fest 2024 · Berklee David Friend Recital Hall',
+    youtubeId: '7flbo2_Gd64',
+  },
+  {
+    title: 'Black Orpheus',
+    context: 'Solo piano · Live at Berk Recital Hall',
+    youtubeId: 'eypWkhHFrqU',
+  },
+  {
+    title: 'Million Years Ago',
+    context: 'Adele cover · Live duo with Mia McIntosh',
     youtubeId: 'X3erxpEimGI',
   },
   {
     title: 'Beautiful Love',
     context: 'Solo piano',
-    youtubeId: 'X3erxpEimGI', // TODO: replace with actual video ID
+    youtubeId: 'noISudgBnYA',
   },
   {
     title: 'Mambo Influenciado',
-    context: 'Trio',
-    youtubeId: 'X3erxpEimGI', // TODO
+    context: 'Solo arrangement',
+    youtubeId: 'K5Tq02Us8iM',
+  },
+  {
+    title: 'In a Sentimental Mood',
+    context: 'Studio recording',
+    youtubeId: 'K05bnhuT4FE',
+  },
+  {
+    title: 'Billies Bounce',
+    context: 'Studio recording',
+    youtubeId: 'crHUGe-KUyI',
   },
   {
     title: 'Giant Steps',
     context: 'Studio recording',
-    youtubeId: 'X3erxpEimGI', // TODO
+    youtubeId: 'my3__r9Ur6E',
+  },
+  {
+    title: 'Blue Bossa',
+    context: 'Live at Post Underground',
+    youtubeId: 'O__SoQS3Bfw',
   },
 ];
 
