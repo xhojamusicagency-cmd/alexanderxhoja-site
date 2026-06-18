@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 
-const BASE_TITLE = 'Xhoja Music Agency';
+const BASE_TITLE = 'Alexander Xhoja';
 const DEFAULT_DESCRIPTION =
-  'Customized music lessons and professional event bookings in Boston, MA. Founded by Alexander Xhoja, Berklee College of Music full-scholarship pianist.';
+  'Alexander Xhoja — pianist, composer, and private piano teacher based in Boston and Los Angeles, and a Berklee College of Music graduate. Performances and private piano lessons.';
 
 /**
  * Sets the document title and meta description for a page.
@@ -15,7 +15,7 @@ export default function usePageTitle(pageTitle?: string, description?: string) {
     // Title
     document.title = pageTitle
       ? `${pageTitle} | ${BASE_TITLE}`
-      : `${BASE_TITLE} | Music Lessons & Event Bookings in Boston`;
+      : `${BASE_TITLE} — Pianist · Composer · Piano Lessons`;
 
     // Meta description (and OG/Twitter mirrors)
     const desc = description || DEFAULT_DESCRIPTION;
@@ -37,7 +37,7 @@ export default function usePageTitle(pageTitle?: string, description?: string) {
     // Mirror the page title to Open Graph + Twitter title too
     const fullTitle = pageTitle
       ? `${pageTitle} | ${BASE_TITLE}`
-      : `${BASE_TITLE} | Music Lessons & Event Bookings in Boston`;
+      : `${BASE_TITLE} — Pianist · Composer · Piano Lessons`;
     ['og:title', 'twitter:title'].forEach((key) => {
       const attr = key.startsWith('og:') ? 'property' : 'name';
       let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement | null;
@@ -56,6 +56,6 @@ export default function usePageTitle(pageTitle?: string, description?: string) {
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', `https://www.xhojamusicagency.com${window.location.pathname}`);
+    canonical.setAttribute('href', `https://www.alexanderxhoja.com${window.location.pathname}`);
   }, [pageTitle, description]);
 }
