@@ -8,6 +8,7 @@ import Shows from './pages/Shows';
 import Videos from './pages/Videos';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import Lessons from './pages/Lessons';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -36,6 +37,8 @@ function App() {
           <Route path="/shows" element={<Shows />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/lessons" element={<Lessons />} />
+          <Route path="/piano-lessons" element={<Navigate to="/lessons" replace />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/booking" element={<Navigate to="/contact" replace />} />
           <Route path="/booking-inquiry" element={<Navigate to="/contact" replace />} />

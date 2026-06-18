@@ -100,6 +100,7 @@ export default function Contact() {
                 <option value="" disabled>Select one…</option>
                 <option value="Solo Booking">Solo piano booking</option>
                 <option value="Trio / Ensemble">Trio or ensemble booking</option>
+                <option value="Private Lessons">Private piano lessons</option>
                 <option value="Recording">Recording / studio session</option>
                 <option value="Collaboration">Collaboration / composition</option>
                 <option value="Press">Press / interview</option>

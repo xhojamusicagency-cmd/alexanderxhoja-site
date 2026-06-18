@@ -11,6 +11,7 @@ export default function Header() {
     { label: 'Shows', href: '/shows' },
     { label: 'Videos', href: '/videos' },
     { label: 'Gallery', href: '/gallery' },
+    { label: 'Lessons', href: '/lessons' },
     { label: 'Contact', href: '/contact' },
   ];
 
