@@ -40,7 +40,7 @@ export default function Bio() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <article className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8]">
             <p className="first-letter:font-display first-letter:text-[88px] first-letter:leading-[0.85] first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:text-bronze">
-              Alexander Xhoja is a Boston-based pianist, composer, and graduate of Berklee College of Music, where he studied on a full-ride scholarship. With dedication and emotional depth, he enriches the lives of his listeners by weaving feeling into every line he plays.
+              Alexander Xhoja is a pianist and composer based between Boston and Los Angeles, and a graduate of Berklee College of Music, where he studied on a full-ride scholarship. With dedication and emotional depth, he enriches the lives of his listeners by weaving feeling into every line he plays.
             </p>
 
             <p className="mt-10">
@@ -81,7 +81,7 @@ export default function Bio() {
             </p>
 
             <p>
-              Today Alexander remains a working, gigging musician — performing solo and with his trio at venues across Boston, New York, and beyond. His strong creative and composing skills make him a passionate advocate for jazz as a living, breathing genre. As an artist, he strives for emotional integrity in every set, and uses his music to tell stories worth listening to.
+              Today Alexander remains a working, gigging musician — performing solo and with his trio at venues across Boston, New York, Los Angeles, and beyond. His strong creative and composing skills make him a passionate advocate for jazz as a living, breathing genre. As an artist, he strives for emotional integrity in every set, and uses his music to tell stories worth listening to.
             </p>
 
             <p>

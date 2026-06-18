@@ -80,6 +80,27 @@ export default function Lessons() {
         </div>
       </section>
 
+      {/* Hear him play */}
+      <section className="bg-charcoal py-20 md:py-28">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-8">
+            Hear him play
+          </p>
+          <div className="relative aspect-video overflow-hidden bg-black/40 ring-1 ring-bronze/30">
+            <iframe
+              src="https://www.youtube.com/embed/eypWkhHFrqU"
+              title="Alexander Xhoja — Black Orpheus, solo piano"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+          <p className="font-serif italic text-ivory/60 text-[15px] mt-6">
+            "Black Orpheus," solo piano — the musicianship behind every lesson.
+          </p>
+        </div>
+      </section>
+
       {/* What we cover */}
       <section className="py-24 md:py-32 bg-ivory">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
