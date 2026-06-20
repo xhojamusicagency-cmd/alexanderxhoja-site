@@ -34,6 +34,13 @@ const credentials = [
   { t: 'Performed internationally', d: 'Paris · Lagos · Spain' },
 ];
 
+const HEAR = [
+  { title: 'Black Orpheus', context: 'Solo piano, live', youtubeId: 'eypWkhHFrqU' },
+  { title: 'Million Years Ago', context: 'Adele cover · live duo', youtubeId: 'X3erxpEimGI' },
+  { title: 'Caravan', context: 'Live at Keys Fest', youtubeId: '7flbo2_Gd64' },
+  { title: 'Mambo Influenciado', context: 'Solo arrangement', youtubeId: 'K5Tq02Us8iM' },
+];
+
 const areas = ['Beverly Hills', 'Brentwood', 'Bel-Air', 'Santa Monica', 'Pacific Palisades', 'Westwood', 'Studio City', 'Encino'];
 
 export default function Lessons() {
@@ -45,6 +52,7 @@ export default function Lessons() {
   const [status, setStatus] = useState<Status>('idle');
   const [honeypot, setHoneypot] = useState('');
   const [mountedAt] = useState(() => Date.now());
+  const [activeVideo, setActiveVideo] = useState(HEAR[0]);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -57,6 +65,7 @@ export default function Lessons() {
       from_email: (fd.get('email') as string) || 'not provided',
       phone: (fd.get('phone') as string) || 'not provided',
       inquiry_type: 'Private Lessons',
+      to_email: 'alexanderxhoja@gmail.com',
       event_date: 'N/A',
       message: `[LESSONS PAGE — welcome lesson request] Student / level: ${fd.get('about') as string}`,
       to_name: 'Alexander Xhoja',
@@ -110,19 +119,38 @@ export default function Lessons() {
       {/* ===================== PROOF — video ===================== */}
       <section id="listen" className="bg-charcoal py-16 md:py-24 scroll-mt-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-7">Hear him play</p>
+          <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-7 text-center">Hear him play</p>
           <div className="relative aspect-video overflow-hidden bg-black/40 ring-1 ring-bronze/30">
             <iframe
-              src="https://www.youtube.com/embed/eypWkhHFrqU"
-              title="Alexander Xhoja — Black Orpheus, solo piano"
+              key={activeVideo.youtubeId}
+              src={`https://www.youtube.com/embed/${activeVideo.youtubeId}`}
+              title={`Alexander Xhoja — ${activeVideo.title}`}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full"
             />
           </div>
-          <p className="font-serif italic text-ivory/60 text-[15px] mt-6">
-            This is who you'd be learning from.
+          <p className="font-serif italic text-ivory/60 text-[15px] mt-5 text-center">
+            {activeVideo.title} — {activeVideo.context}
           </p>
+          <div className="grid grid-cols-4 gap-3 sm:gap-4 mt-8 max-w-2xl mx-auto">
+            {HEAR.map((v) => (
+              <button
+                key={v.youtubeId}
+                onClick={() => setActiveVideo(v)}
+                aria-label={`Play ${v.title}`}
+                className={`group relative aspect-video overflow-hidden bg-black/40 transition ${
+                  activeVideo.youtubeId === v.youtubeId ? 'ring-2 ring-bronze-light' : 'ring-1 ring-ivory/15 hover:ring-bronze-light/60'
+                }`}
+              >
+                <img
+                  src={`https://i.ytimg.com/vi/${v.youtubeId}/hqdefault.jpg`}
+                  alt={v.title}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity ${activeVideo.youtubeId === v.youtubeId ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'}`}
+                />
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 

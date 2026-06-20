@@ -56,6 +56,6 @@ export default function usePageTitle(pageTitle?: string, description?: string) {
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', `https://www.alexanderxhoja.com${window.location.pathname}`);
+    canonical.setAttribute('href', `https://pianowithalexander.com${window.location.pathname}`);
   }, [pageTitle, description]);
 }

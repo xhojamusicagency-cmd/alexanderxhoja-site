@@ -27,6 +27,7 @@ export default function Contact() {
       event_date: (formData.get('event_date') as string) || 'TBD',
       message: formData.get('message') as string,
       to_name: 'Alexander Xhoja',
+      to_email: 'alexanderxhoja@gmail.com',
     };
 
     try {
