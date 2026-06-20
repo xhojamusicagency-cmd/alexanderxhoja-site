@@ -30,7 +30,7 @@ export default function Header() {
             <Link
               key={link.href}
               to={link.href}
-              className={`font-serif text-[14px] italic transition-colors ${
+              className={`font-serif text-[17px] transition-colors ${
                 location.pathname === link.href
                   ? 'text-bronze'
                   : 'text-graphite hover:text-bronze'
