@@ -65,7 +65,7 @@ export default function Lessons() {
       from_email: (fd.get('email') as string) || 'not provided',
       phone: (fd.get('phone') as string) || 'not provided',
       inquiry_type: 'Private Lessons',
-      to_email: 'alexanderxhoja@gmail.com',
+      to_email: 'pianowithalexander@gmail.com',
       event_date: 'N/A',
       message: `[LESSONS PAGE — welcome lesson request] Student / level: ${fd.get('about') as string}`,
       to_name: 'Alexander Xhoja',

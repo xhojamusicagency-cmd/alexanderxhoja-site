@@ -27,7 +27,7 @@ export default function Contact() {
       event_date: (formData.get('event_date') as string) || 'TBD',
       message: formData.get('message') as string,
       to_name: 'Alexander Xhoja',
-      to_email: 'alexanderxhoja@gmail.com',
+      to_email: (formData.get('inquiry_type') === 'Private Lessons') ? 'pianowithalexander@gmail.com' : 'alexanderxhoja@gmail.com',
     };
 
     try {
