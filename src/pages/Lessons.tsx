@@ -99,7 +99,7 @@ export default function Lessons() {
           </div>
           <div className="lg:col-span-5">
             <div className="aspect-[4/5] overflow-hidden bg-ivory-deep">
-              <img src="/alexander-xhoja.jpg" alt="Alexander Xhoja, concert pianist and private piano teacher in Los Angeles" className="w-full h-full object-cover" />
+              <img src="/alexander-xhoja-concert.jpg" alt="Alexander Xhoja performing at a Steinway grand under concert lighting" className="w-full h-full object-cover object-[32%_center]" />
             </div>
           </div>
         </div>
