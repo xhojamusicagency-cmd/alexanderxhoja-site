@@ -81,7 +81,7 @@ export default function Lessons() {
               Private Piano Studio · Westside Los Angeles
             </p>
             <h1 className="font-display text-[56px] sm:text-[82px] leading-[0.93] tracking-[-0.02em] font-light text-charcoal mb-8">
-              Study with<br />an artist.
+              Piano lessons<br />with Alexander.
             </h1>
             <div className="h-px w-20 bg-bronze mb-8" />
             <p className="font-serif text-[19px] sm:text-[21px] leading-[1.6] text-graphite max-w-xl mb-10">
