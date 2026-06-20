@@ -44,7 +44,7 @@ export default function Bio() {
             </p>
 
             <p className="mt-10">
-              He began at five, immersed early through his father and his first piano teacher. Rather than start with formal training, he learned the way many of his heroes did — by ear, listening and imitating until the music made sense from the inside. Formal study came later, and with it the technique to carry the instinct.
+              He began playing at the age of five, immersed early through his father and his first piano teacher. Rather than start with formal training, he learned the way many of his heroes did — by ear, listening and imitating until the music made sense from the inside. Formal study came later, and with it the technique to carry the instinct.
             </p>
 
             <p className="mt-8">

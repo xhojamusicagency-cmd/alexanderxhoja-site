@@ -88,10 +88,10 @@ export default function Home() {
       {/* ============================================================ */}
       <section className="border-y border-rule bg-ivory">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 py-8 sm:py-6 flex flex-col sm:flex-row items-center gap-y-4 sm:gap-x-12 sm:justify-between">
-          <Credential label="Berklee" value="Full-Ride Scholar" />
-          <Credential label="2023" value="M.A.J.E. M.V.P." />
-          <Credential label="Featured" value="Mingus Big Band" />
-          <Credential label="Piano Bench" value="MA All-State Jazz" />
+          <Credential label="Berklee" value="Full Scholarship" />
+          <Credential label="Berklee Commencement" value="Opening Soloist" />
+          <Credential label="MA Jazz Educators" value="2023 MVP" />
+          <Credential label="Mingus Big Band" value="Invited Sit-In" />
         </div>
       </section>
 
@@ -185,11 +185,11 @@ export default function Home() {
                 About
               </p>
               <h2 className="font-display text-[44px] sm:text-[64px] leading-[1.0] tracking-[-0.02em] font-light text-charcoal mb-10">
-                A pianist<br />since five.
+                A pianist since<br />the age of five.
               </h2>
               <div className="h-px w-16 bg-bronze mb-10" />
               <p className="font-serif text-[19px] sm:text-[21px] text-charcoal/85 leading-[1.75] mb-6">
-                Alexander Xhoja began playing at age five. At eleven he was performing across the greater Boston area alongside seasoned musicians. By fifteen he held a one-year trio residency at <em>Central Cafe</em>. Today he is a Berklee College of Music full-scholarship graduate, a Massachusetts Association of Jazz Education Most Valuable Player, and the founder of <a href="https://xhojamusicagency.com" className="text-bronze hover:text-bronze-light underline decoration-rule underline-offset-4">Xhoja Music Agency</a>.
+                Alexander Xhoja began playing at the age of five. At eleven he was performing across the greater Boston area alongside seasoned musicians. By fifteen he held a one-year trio residency at <em>Central Cafe</em>. Today he is a Berklee College of Music full-scholarship graduate, a Massachusetts Association of Jazz Education Most Valuable Player, and the founder of <a href="https://xhojamusicagency.com" className="text-bronze hover:text-bronze-light underline decoration-rule underline-offset-4">Xhoja Music Agency</a>.
               </p>
               <p className="font-serif italic text-[18px] text-graphite leading-[1.7] mb-10 max-w-md">
                 His biggest influence was Chick Corea. The mission stays the same: emotional integrity in every set.
