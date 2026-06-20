@@ -58,7 +58,7 @@ export default function Lessons() {
       phone: (fd.get('phone') as string) || 'not provided',
       inquiry_type: 'Private Lessons',
       event_date: 'N/A',
-      message: `[LESSONS PAGE — intro lesson request] Student / level: ${fd.get('about') as string}`,
+      message: `[LESSONS PAGE — welcome lesson request] Student / level: ${fd.get('about') as string}`,
       to_name: 'Alexander Xhoja',
     };
     try {
@@ -89,7 +89,7 @@ export default function Lessons() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
               <a href="#book" className="inline-block text-center bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors">
-                Request your intro lesson
+                Request your welcome lesson
               </a>
               <a href="#listen" className="inline-block text-center font-sans text-[12px] tracking-label uppercase px-9 py-4 border border-charcoal/25 text-charcoal hover:border-bronze hover:text-bronze transition-colors">
                 Hear him play
@@ -192,13 +192,13 @@ export default function Lessons() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8 text-center">
           <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-7">Begin</p>
           <h2 className="font-display text-[40px] sm:text-[52px] leading-[1.05] font-light text-charcoal mb-6">
-            Start with a<br />$50 introduction.
+            Start with a<br />$60 welcome lesson.
           </h2>
           <p className="font-serif text-[19px] sm:text-[20px] leading-[1.7] text-graphite mb-10">
             We play, we talk, and I build your plan — no commitment. Weekly lessons follow at <span className="text-charcoal">$100</span>, or <span className="text-charcoal">$130</span> fully in-home. A standing weekly seat is how real progress happens — and there are only so many.
           </p>
           <a href="#book" className="inline-block bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors">
-            Request your intro lesson →
+            Request your welcome lesson →
           </a>
         </div>
       </section>
@@ -223,7 +223,7 @@ export default function Lessons() {
             <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-7">Request your seat</p>
             <h2 className="font-display text-[40px] sm:text-[52px] leading-[1.05] font-light text-ivory mb-6">Let's begin.</h2>
             <p className="font-serif text-ivory/65 text-[18px] leading-[1.7]">
-              Send this and I'll text you back — usually within the hour — to set up your introductory lesson.
+              Send this and I'll text you back — usually within the hour — to set up your welcome lesson.
             </p>
           </div>
 
@@ -231,7 +231,7 @@ export default function Lessons() {
             <div className="text-center py-16 border-t border-b border-ivory/15">
               <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-4">Got it — talk soon</p>
               <p className="font-serif italic text-ivory text-[20px] leading-relaxed">
-                Thank you. I'll be in touch shortly to arrange your introductory lesson. In a hurry? Text me at <a href={TEL} className="underline decoration-bronze-light underline-offset-4">(857) 498-8487</a>.
+                Thank you. I'll be in touch shortly to arrange your welcome lesson. In a hurry? Text me at <a href={TEL} className="underline decoration-bronze-light underline-offset-4">(857) 498-8487</a>.
               </p>
             </div>
           ) : (
@@ -265,7 +265,7 @@ export default function Lessons() {
                 disabled={status === 'sending'}
                 className="w-full bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors disabled:opacity-50"
               >
-                {status === 'sending' ? 'Sending…' : 'Request my introductory lesson'}
+                {status === 'sending' ? 'Sending…' : 'Request my welcome lesson'}
               </button>
               {status === 'error' && (
                 <p className="font-serif italic text-[15px] text-bronze-light text-center">

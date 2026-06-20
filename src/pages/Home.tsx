@@ -4,19 +4,19 @@ import usePageTitle from '../hooks/usePageTitle';
 // Curated reel of the strongest performances surfaced on the homepage
 const REEL = [
   {
-    title: 'Caravan',
-    context: 'Keys Fest 2024 · Berklee David Friend Recital Hall',
-    youtubeId: '7flbo2_Gd64',
-  },
-  {
     title: 'Black Orpheus',
     context: 'Solo · Live at Berk Recital Hall',
     youtubeId: 'eypWkhHFrqU',
   },
   {
-    title: 'Giant Steps',
-    context: 'Studio recording',
-    youtubeId: 'my3__r9Ur6E',
+    title: 'Million Years Ago',
+    context: 'Adele cover · Live duo',
+    youtubeId: 'X3erxpEimGI',
+  },
+  {
+    title: 'Mambo Influenciado',
+    context: 'Solo arrangement',
+    youtubeId: 'K5Tq02Us8iM',
   },
 ];
 

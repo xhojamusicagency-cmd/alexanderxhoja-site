@@ -7,12 +7,13 @@ interface Video {
   context?: string;
 }
 
+// Ordered newest -> oldest by YouTube upload date
 const VIDEOS: Video[] = [
-  { title: 'Caravan', context: 'Live at Keys Fest 2024 · Berklee David Friend Recital Hall', youtubeId: '7flbo2_Gd64' },
   { title: 'Black Orpheus', context: 'Solo piano · Live at Berk Recital Hall', youtubeId: 'eypWkhHFrqU' },
   { title: 'Million Years Ago', context: 'Adele cover · Live duo with Mia McIntosh', youtubeId: 'X3erxpEimGI' },
-  { title: 'Beautiful Love', context: 'Solo piano', youtubeId: 'noISudgBnYA' },
   { title: 'Mambo Influenciado', context: 'Solo arrangement', youtubeId: 'K5Tq02Us8iM' },
+  { title: 'Beautiful Love', context: 'Solo piano', youtubeId: 'noISudgBnYA' },
+  { title: 'Caravan', context: 'Live at Keys Fest 2024 · Berklee David Friend Recital Hall', youtubeId: '7flbo2_Gd64' },
   { title: 'In a Sentimental Mood', context: 'Studio recording', youtubeId: 'K05bnhuT4FE' },
   { title: 'Billies Bounce', context: 'Studio recording', youtubeId: 'crHUGe-KUyI' },
   { title: 'Giant Steps', context: 'Studio recording', youtubeId: 'my3__r9Ur6E' },
