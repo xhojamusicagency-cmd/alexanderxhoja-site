@@ -77,7 +77,7 @@ export default function Bio() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <article className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8] space-y-8">
             <p>
-              He opened Berklee's commencement ceremony with a solo piano performance at Agganis Arena. In 2023 he received the Massachusetts Association of Jazz Education's <span className="italic">Most Valuable Player</span> award; he has performed at the Mingus Festival and been invited to sit in with the Mingus Big Band, held the piano bench for the Massachusetts All-State Jazz Ensemble, and performed internationally, from Paris to Lagos.
+              He opened the Berklee commencement concert with a solo piano introduction at Agganis Arena. In 2023 he received the Massachusetts Association of Jazz Education's <span className="italic">Most Valuable Player</span> award; he has played jazz rooms including <span className="italic">Regattabar</span>, performed at the Mingus Festival and been invited to sit in with the Mingus Big Band, held the piano bench for the Massachusetts All-State Jazz Ensemble, and performed internationally, from Paris to Lagos.
             </p>
 
             <p>
@@ -103,10 +103,11 @@ export default function Bio() {
           </p>
           <ul className="space-y-5 font-serif text-charcoal/85 text-[18px] leading-[1.6]">
             {[
-              'Opened Berklee commencement — solo piano, Agganis Arena',
+              'Opened the Berklee commencement concert — solo piano intro, Agganis Arena',
               'Full Scholarship — Berklee College of Music',
               'Most Valuable Player — Massachusetts Association of Jazz Education (2023)',
               'Invited to sit in with the Mingus Big Band — Mingus Festival',
+              'Performed at Regattabar — Cambridge',
               'Piano Bench — Massachusetts All-State Jazz Ensemble',
               'One-year trio residency — Central Cafe',
               'International performances — Paris · Lagos · Spain',

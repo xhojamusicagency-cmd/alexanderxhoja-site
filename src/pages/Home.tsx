@@ -21,11 +21,13 @@ const REEL = [
 ];
 
 const PRESTIGE_VENUES = [
+  'Regattabar · Cambridge',
   'Lee and Alma Berk Recital Hall',
   'David Friend Recital Hall',
-  'Allen Center for the Arts',
+  'MIT · Cambridge',
   'The New School · NYC',
   'Berklee Colvin Hall',
+  'Allen Center for the Arts',
   'Hunneman Hall · Boston',
 ];
 
