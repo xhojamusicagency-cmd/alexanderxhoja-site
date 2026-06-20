@@ -11,7 +11,7 @@ export default function Footer() {
             <p className="font-display text-2xl font-light tracking-editorial text-charcoal mb-3">Alexander Xhoja</p>
             <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-5">Pianist · Composer · Bandleader</p>
             <p className="font-serif italic text-graphite text-[15px] leading-relaxed max-w-xs">
-              Boston &amp; Los Angeles. Berklee-trained. Telling stories through the piano.
+              Los Angeles · Berklee-trained. Telling stories through the piano.
             </p>
           </div>
 

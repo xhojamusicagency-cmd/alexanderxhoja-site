@@ -20,7 +20,7 @@ export default function Bio() {
             </h1>
             <div className="h-px w-20 bg-bronze mb-10" />
             <p className="font-serif italic text-[19px] leading-[1.65] text-graphite max-w-md">
-              Pianist, composer, and bandleader — Berklee-trained, based between Boston and Los Angeles.
+              Pianist, composer, and bandleader — Berklee-trained, based in Los Angeles.
             </p>
           </div>
           <div className="lg:col-span-6">
@@ -40,7 +40,7 @@ export default function Bio() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <article className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8]">
             <p className="first-letter:font-display first-letter:text-[88px] first-letter:leading-[0.85] first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:text-bronze">
-              Alexander Xhoja is a pianist and composer based between Boston and Los Angeles, and a graduate of Berklee College of Music, where he studied on a full scholarship. He works across jazz and classical music — as a soloist, with his trio, and as a composer and arranger.
+              Alexander Xhoja is a Los Angeles–based pianist and composer, and a graduate of Berklee College of Music, where he studied on a full scholarship. He works across jazz and classical music — as a soloist, with his trio, and as a composer and arranger.
             </p>
 
             <p className="mt-10">

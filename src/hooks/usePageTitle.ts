@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 const BASE_TITLE = 'Alexander Xhoja';
 const DEFAULT_DESCRIPTION =
-  'Alexander Xhoja — pianist, composer, and private piano teacher based in Boston and Los Angeles, and a Berklee College of Music graduate. Performances and private piano lessons.';
+  'Alexander Xhoja — a Los Angeles pianist, composer, and private piano teacher, and a Berklee College of Music graduate. Concert performances and private lessons across the Westside.';
 
 /**
  * Sets the document title and meta description for a page.
@@ -15,7 +15,7 @@ export default function usePageTitle(pageTitle?: string, description?: string) {
     // Title
     document.title = pageTitle
       ? `${pageTitle} | ${BASE_TITLE}`
-      : `${BASE_TITLE} — Pianist · Composer · Piano Lessons`;
+      : `${BASE_TITLE} — Los Angeles Pianist & Private Piano Teacher`;
 
     // Meta description (and OG/Twitter mirrors)
     const desc = description || DEFAULT_DESCRIPTION;
@@ -37,7 +37,7 @@ export default function usePageTitle(pageTitle?: string, description?: string) {
     // Mirror the page title to Open Graph + Twitter title too
     const fullTitle = pageTitle
       ? `${pageTitle} | ${BASE_TITLE}`
-      : `${BASE_TITLE} — Pianist · Composer · Piano Lessons`;
+      : `${BASE_TITLE} — Los Angeles Pianist & Private Piano Teacher`;
     ['og:title', 'twitter:title'].forEach((key) => {
       const attr = key.startsWith('og:') ? 'property' : 'name';
       let el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement | null;

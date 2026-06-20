@@ -32,7 +32,7 @@ const PRESTIGE_VENUES = [
 export default function Home() {
   usePageTitle(
     undefined,
-    'Alexander Xhoja — pianist and composer based in Boston and Los Angeles, Berklee College of Music full-scholarship graduate. Solo and ensemble performances, and private piano lessons in LA.'
+    'Alexander Xhoja — a Los Angeles pianist, composer, and Berklee College of Music full-scholarship graduate. Concert performances and private piano lessons across the Westside.'
   );
 
   return (
@@ -68,7 +68,7 @@ export default function Home() {
             </h1>
             <div className="mt-10 flex flex-col sm:flex-row gap-8 sm:items-end sm:justify-between">
               <p className="font-serif italic text-[20px] sm:text-[22px] text-graphite leading-[1.55] max-w-md">
-                A pianist based in Boston and Los Angeles, telling stories through the keys — jazz, classical, and the rooms in between.
+                A Los Angeles pianist telling stories through the keys — jazz, classical, and the rooms in between.
               </p>
               <Link
                 to="/videos"
