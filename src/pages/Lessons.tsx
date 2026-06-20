@@ -23,6 +23,15 @@ const transformations = [
   },
 ];
 
+const credentials = [
+  { t: 'Bachelor of Music, Piano Performance', d: 'Berklee College of Music — full scholarship' },
+  { t: "3.9 GPA · Dean's List", d: 'Berklee College of Music' },
+  { t: '"Most Valuable Player," 2023', d: 'Massachusetts Association of Jazz Education' },
+  { t: 'Invited to sit in with the Mingus Big Band', d: 'Mingus Festival' },
+  { t: 'Film composer', d: 'Adventures in Peterland (2024)' },
+  { t: 'Performed internationally', d: 'Paris · Lagos · Spain' },
+];
+
 const areas = ['Beverly Hills', 'Brentwood', 'Bel-Air', 'Santa Monica', 'Pacific Palisades', 'Westwood', 'Studio City', 'Encino'];
 
 export default function Lessons() {
@@ -142,6 +151,21 @@ export default function Lessons() {
               </span>
             </footer>
           </blockquote>
+        </div>
+      </section>
+
+      {/* ===================== CREDENTIALS ===================== */}
+      <section className="bg-ivory py-20 md:py-28">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+          <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-12 text-center">Credentials</p>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-9">
+            {credentials.map((c) => (
+              <li key={c.t} className="border-l-2 border-bronze/30 pl-5">
+                <p className="font-display text-[21px] text-charcoal leading-snug">{c.t}</p>
+                <p className="font-serif italic text-graphite text-[15px] mt-1.5">{c.d}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
