@@ -8,13 +8,19 @@ const TEL = 'tel:+18574988487';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
 
-const curriculum = [
-  { t: 'Technique & tone', d: 'Posture, hand position, and a sound you actually like — the foundation everything else stands on.' },
-  { t: 'Reading & theory', d: 'Notation and harmony, so you understand what you play, not just where your fingers land.' },
-  { t: 'The music you love', d: 'Classical, jazz, pop, R&B, gospel — we work on the songs you actually want to play.' },
-  { t: 'Ear & improvisation', d: 'Training your ear and playing by feel, so you can sit down and just make music.' },
-  { t: 'Audition & conservatory prep', d: 'Targeted preparation for school auditions, competitions, and applications.' },
-  { t: 'Real, weekly progress', d: 'A standing weekly lesson and a clear plan — the surest path to actually getting good.' },
+const transformations = [
+  {
+    who: 'For your child',
+    d: 'The kid who plays at the party — not the one who quit after a year. Lessons built around music they actually love, so practice stops being a fight.',
+  },
+  {
+    who: 'For you',
+    d: 'Finally sit down and play the piece you have always wanted to. Adult beginners and returners welcome — no judgment, real progress, on your schedule.',
+  },
+  {
+    who: 'For the serious student',
+    d: 'Recital, competition, audition, and conservatory preparation — with a teacher who has walked through the doors you are aiming at.',
+  },
 ];
 
 const areas = ['Beverly Hills', 'Brentwood', 'Bel-Air', 'Santa Monica', 'Pacific Palisades', 'Westwood', 'Studio City', 'Encino'];
@@ -22,7 +28,7 @@ const areas = ['Beverly Hills', 'Brentwood', 'Bel-Air', 'Santa Monica', 'Pacific
 export default function Lessons() {
   usePageTitle(
     'Private Piano Lessons in Los Angeles',
-    "Private, in-home piano lessons across LA's Westside with Berklee-trained pianist Alexander Xhoja. All ages and levels. Start with a $50 intro lesson."
+    'Study privately with Alexander Xhoja — a working concert pianist and Berklee full-scholarship graduate offering in-home piano lessons across LA’s Westside. A small studio, a few seats each season.'
   );
 
   const [status, setStatus] = useState<Status>('idle');
@@ -56,48 +62,42 @@ export default function Lessons() {
 
   return (
     <div className="bg-ivory text-charcoal">
-      {/* ===================== HERO — one job: book the intro ===================== */}
+      {/* ===================== HERO ===================== */}
       <section className="px-6 sm:px-10 lg:px-16 max-w-[1400px] mx-auto pt-8 sm:pt-14 pb-16 lg:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
             <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-7">
-              Private Piano Lessons · Westside Los Angeles
+              Private Piano Studio · Westside Los Angeles
             </p>
-            <h1 className="font-display text-[52px] sm:text-[76px] leading-[0.95] tracking-[-0.02em] font-light text-charcoal mb-8">
-              Learn piano,<br />in your home.
+            <h1 className="font-display text-[56px] sm:text-[82px] leading-[0.93] tracking-[-0.02em] font-light text-charcoal mb-8">
+              Study with<br />an artist.
             </h1>
             <div className="h-px w-20 bg-bronze mb-8" />
             <p className="font-serif text-[19px] sm:text-[21px] leading-[1.6] text-graphite max-w-xl mb-10">
-              One-on-one lessons with a working concert pianist — all ages and levels, taught at your own piano across the Westside. Start with a relaxed <span className="text-charcoal italic">$50 intro lesson</span>.
+              In-home piano lessons with <span className="text-charcoal">Alexander Xhoja</span> — a working concert pianist and Berklee full-scholarship graduate. Not lesson-mill drills: real musicianship, taught the way the greats actually learned. A small private studio, a few new students each season.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
-              <a
-                href="#book"
-                className="inline-block text-center bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors"
-              >
-                Book your $50 intro lesson
+              <a href="#book" className="inline-block text-center bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors">
+                Request your intro lesson
               </a>
-              <a
-                href={SMS}
-                className="inline-block text-center font-sans text-[12px] tracking-label uppercase px-9 py-4 border border-charcoal/25 text-charcoal hover:border-bronze hover:text-bronze transition-colors"
-              >
-                Text to book
+              <a href="#listen" className="inline-block text-center font-sans text-[12px] tracking-label uppercase px-9 py-4 border border-charcoal/25 text-charcoal hover:border-bronze hover:text-bronze transition-colors">
+                Hear him play
               </a>
             </div>
             <p className="font-sans text-[12px] tracking-[0.06em] text-graphite/80 mt-6">
-              In your home · all ages &amp; levels · a few Westside spots open this season
+              All ages &amp; levels · in your home across the Westside
             </p>
           </div>
           <div className="lg:col-span-5">
             <div className="aspect-[4/5] overflow-hidden bg-ivory-deep">
-              <img src="/alexander-xhoja.jpg" alt="Alexander Xhoja, pianist and teacher in Los Angeles" className="w-full h-full object-cover" />
+              <img src="/alexander-xhoja.jpg" alt="Alexander Xhoja, concert pianist and private piano teacher in Los Angeles" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ===================== PROOF — hear him play ===================== */}
-      <section className="bg-charcoal py-16 md:py-24">
+      {/* ===================== PROOF — video ===================== */}
+      <section id="listen" className="bg-charcoal py-16 md:py-24 scroll-mt-20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-7">Hear him play</p>
           <div className="relative aspect-video overflow-hidden bg-black/40 ring-1 ring-bronze/30">
@@ -110,58 +110,75 @@ export default function Lessons() {
             />
           </div>
           <p className="font-serif italic text-ivory/60 text-[15px] mt-6">
-            "Black Orpheus," solo piano — the musicianship behind every lesson.
+            This is who you'd be learning from.
           </p>
         </div>
       </section>
 
-      {/* ===================== THE OFFER — simple, low-friction ===================== */}
-      <section className="bg-ivory-deep py-20 md:py-28">
-        <div className="max-w-2xl mx-auto px-6 lg:px-8 text-center">
-          <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-7">Start here</p>
-          <h2 className="font-display text-[40px] sm:text-[52px] leading-[1.05] font-light text-charcoal mb-6">
-            Your first lesson<br />is just $50.
-          </h2>
-          <p className="font-serif text-[19px] sm:text-[20px] leading-[1.7] text-graphite mb-10">
-            We meet, you play, and we map out a plan — no commitment. After that, weekly lessons are <span className="text-charcoal">$100</span>, or <span className="text-charcoal">$130</span> fully in-home.
-          </p>
-          <a
-            href="#book"
-            className="inline-block bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors"
-          >
-            Book the $50 intro lesson →
-          </a>
-        </div>
-      </section>
-
-      {/* ===================== WHY — brief, verified ===================== */}
+      {/* ===================== THE STORY — why him ===================== */}
       <section className="bg-ivory py-20 md:py-28">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-10">
-            <Why n="01" t="A working performer" d="You learn from an active concert pianist and Berklee College of Music graduate — not a hobbyist." />
-            <Why n="02" t="At your piano, your schedule" d="Lessons come to your home anywhere on the Westside. No commute, no studio rental." />
-            <Why n="03" t="Every age & every level" d="From a child's first lesson to adult returners and serious audition prep — tailored to the student." />
-          </div>
+        <div className="max-w-2xl mx-auto px-6 lg:px-8">
+          <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-8">Why study with Alexander</p>
+          <p className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8]">
+            Alexander started at five and learned the way his heroes did — by ear, by feel, chasing the sound until it was his own. By eleven he was performing across Boston alongside seasoned musicians; at Berklee College of Music he studied on a full scholarship. He has performed from Paris to Los Angeles, and has spent years teaching students from their very first notes to conservatory auditions.
+          </p>
+          <p className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8] mt-7">
+            He does not treat piano as a chore to get through. He teaches you to <span className="italic">make music</span> — so you actually want to sit down and play.
+          </p>
         </div>
       </section>
 
-      {/* ===================== WHAT WE COVER (SEO + reassurance) ===================== */}
+      {/* ===================== THE COREA MOMENT — signature pull quote ===================== */}
+      <section className="bg-charcoal text-ivory py-24 md:py-32">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+          <blockquote>
+            <p className="font-display italic text-3xl sm:text-5xl lg:text-[56px] leading-[1.15] text-ivory mb-8">
+              "This world needs<br />more pianists like us."
+            </p>
+            <footer>
+              <span className="block h-px w-12 bg-bronze-light mx-auto mb-5" />
+              <span className="font-sans text-[11px] tracking-[0.22em] uppercase text-ivory/65">
+                — Chick Corea, to Alexander, backstage
+              </span>
+            </footer>
+          </blockquote>
+        </div>
+      </section>
+
+      {/* ===================== TRANSFORMATION ===================== */}
       <section className="bg-ivory-deep py-20 md:py-28">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
-          <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-12 text-center">What we cover</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border border-rule">
-            {curriculum.map((item) => (
-              <div key={item.t} className="bg-ivory-deep p-8 lg:p-9">
-                <h3 className="font-display text-[24px] sm:text-[26px] font-light text-charcoal mb-3 leading-tight">{item.t}</h3>
-                <p className="font-serif text-graphite text-[16px] leading-[1.6]">{item.d}</p>
+          <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-12 text-center">What changes</p>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+            {transformations.map((t) => (
+              <div key={t.who}>
+                <h3 className="font-display text-[26px] sm:text-[28px] font-light text-charcoal mb-4 leading-tight">{t.who}</h3>
+                <div className="h-px w-12 bg-bronze mb-5" />
+                <p className="font-serif text-graphite text-[17px] leading-[1.65]">{t.d}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* ===================== THE OFFER ===================== */}
+      <section className="bg-ivory py-20 md:py-28">
+        <div className="max-w-2xl mx-auto px-6 lg:px-8 text-center">
+          <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-7">Begin</p>
+          <h2 className="font-display text-[40px] sm:text-[52px] leading-[1.05] font-light text-charcoal mb-6">
+            Start with a<br />$50 introduction.
+          </h2>
+          <p className="font-serif text-[19px] sm:text-[20px] leading-[1.7] text-graphite mb-10">
+            We play, we talk, and I build your plan — no commitment. Weekly lessons follow at <span className="text-charcoal">$100</span>, or <span className="text-charcoal">$130</span> fully in-home. A standing weekly seat is how real progress happens — and there are only so many.
+          </p>
+          <a href="#book" className="inline-block bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors">
+            Request your intro lesson →
+          </a>
+        </div>
+      </section>
+
       {/* ===================== AREAS ===================== */}
-      <section className="bg-ivory py-16 md:py-20">
+      <section className="bg-ivory-deep py-16 md:py-20">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 text-center">
           <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-8">Where I teach</p>
           <ul className="flex flex-wrap justify-center gap-x-8 gap-y-3 max-w-3xl mx-auto">
@@ -173,14 +190,14 @@ export default function Lessons() {
         </div>
       </section>
 
-      {/* ===================== BOOK — the conversion target ===================== */}
+      {/* ===================== BOOK ===================== */}
       <section id="book" className="bg-charcoal text-ivory py-24 md:py-32 scroll-mt-20">
         <div className="max-w-xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-7">Book your intro lesson</p>
-            <h2 className="font-display text-[40px] sm:text-[52px] leading-[1.05] font-light text-ivory mb-6">Let's get started.</h2>
+            <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-7">Request your seat</p>
+            <h2 className="font-display text-[40px] sm:text-[52px] leading-[1.05] font-light text-ivory mb-6">Let's begin.</h2>
             <p className="font-serif text-ivory/65 text-[18px] leading-[1.7]">
-              Send this and I'll text you back — usually within the hour — to set up your $50 intro lesson.
+              Send this and I'll text you back — usually within the hour — to set up your introductory lesson.
             </p>
           </div>
 
@@ -188,7 +205,7 @@ export default function Lessons() {
             <div className="text-center py-16 border-t border-b border-ivory/15">
               <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-4">Got it — talk soon</p>
               <p className="font-serif italic text-ivory text-[20px] leading-relaxed">
-                Thanks! I'll be in touch shortly to set up your intro lesson. In a hurry? Text me at <a href={TEL} className="underline decoration-bronze-light underline-offset-4">(857) 498-8487</a>.
+                Thank you. I'll be in touch shortly to arrange your introductory lesson. In a hurry? Text me at <a href={TEL} className="underline decoration-bronze-light underline-offset-4">(857) 498-8487</a>.
               </p>
             </div>
           ) : (
@@ -222,7 +239,7 @@ export default function Lessons() {
                 disabled={status === 'sending'}
                 className="w-full bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors disabled:opacity-50"
               >
-                {status === 'sending' ? 'Sending…' : 'Request my $50 intro lesson'}
+                {status === 'sending' ? 'Sending…' : 'Request my introductory lesson'}
               </button>
               {status === 'error' && (
                 <p className="font-serif italic text-[15px] text-bronze-light text-center">
@@ -241,16 +258,6 @@ export default function Lessons() {
           </div>
         </div>
       </section>
-    </div>
-  );
-}
-
-function Why({ n, t, d }: { n: string; t: string; d: string }) {
-  return (
-    <div>
-      <p className="font-display text-[22px] text-bronze mb-3">{n}</p>
-      <h3 className="font-display text-[24px] sm:text-[26px] font-light text-charcoal mb-3 leading-tight">{t}</h3>
-      <p className="font-serif text-graphite text-[16px] leading-[1.6]">{d}</p>
     </div>
   );
 }
