@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Youtube } from 'lucide-react';
+import { Instagram, Youtube, Facebook } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -42,8 +42,11 @@ export default function Footer() {
                 </a>
               </li>
               <li className="pt-3 flex items-center gap-5">
-                <a href="https://instagram.com/alexanderxhoja" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-graphite hover:text-bronze transition-colors">
+                <a href="https://www.instagram.com/alexander_xhoja_music" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-graphite hover:text-bronze transition-colors">
                   <Instagram size={18} />
+                </a>
+                <a href="https://www.facebook.com/p/Alexander-Xhoja-100063568171742/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-graphite hover:text-bronze transition-colors">
+                  <Facebook size={18} />
                 </a>
                 <a href="https://www.youtube.com/@alexanderxhoja" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-graphite hover:text-bronze transition-colors">
                   <Youtube size={20} />

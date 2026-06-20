@@ -7,11 +7,12 @@ interface Show {
   detail?: string;
 }
 
+// Newest -> oldest
 const PAST_SHOWS: Show[] = [
   { date: 'June 15, 2025', venue: 'Grace by Nia', detail: '12 pm' },
-  { date: 'August 5, 2024', venue: 'The Lee and Alma Berk Recital Hall', detail: '7 pm' },
-  { date: 'September 22, 2024', venue: 'The Allen Center for the Arts', detail: '3 pm' },
   { date: 'October 3, 2024', venue: 'The Lee and Alma Berk Recital Hall', detail: '7 pm' },
+  { date: 'September 22, 2024', venue: 'The Allen Center for the Arts', detail: '3 pm' },
+  { date: 'August 5, 2024', venue: 'The Lee and Alma Berk Recital Hall', detail: '7 pm' },
   { date: 'April 26, 2024', venue: 'Berklee College of Music, Colvin Hall' },
   { date: 'February 28, 2024', venue: 'Keys Fest — David Friend Recital Hall' },
   { date: 'December 12, 2023', venue: 'Wellesley Village Church', city: 'Wellesley, MA' },

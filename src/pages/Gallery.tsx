@@ -7,6 +7,8 @@ interface Photo {
 }
 
 const PHOTOS: Photo[] = [
+  { src: '/alexander-xhoja-concert-blue.jpg', alt: 'Alexander Xhoja at the piano under concert lighting', caption: 'On stage' },
+  { src: '/alexander-xhoja-concert.jpg', alt: 'Alexander Xhoja performing under concert lighting', caption: 'In performance' },
   { src: '/alexander-xhoja-recital.jpg', alt: 'Alexander Xhoja in recital', caption: 'Recital' },
   { src: '/alexander-xhoja.jpg', alt: 'Alexander Xhoja portrait', caption: 'Portrait' },
   { src: '/hero-piano-poster.jpg', alt: 'Piano detail', caption: 'Hands at work' },
