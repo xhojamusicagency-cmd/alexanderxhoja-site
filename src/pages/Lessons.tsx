@@ -25,6 +25,7 @@ const transformations = [
 
 const credentials = [
   { t: 'Bachelor of Music, Piano Performance', d: 'Berklee College of Music — full scholarship' },
+  { t: "Opened Berklee's commencement", d: 'Solo piano · Agganis Arena' },
   { t: "3.9 GPA · Dean's List", d: 'Berklee College of Music' },
   { t: '"Most Valuable Player," 2023', d: 'Massachusetts Association of Jazz Education' },
   { t: 'Invited to sit in with the Mingus Big Band', d: 'Mingus Festival' },

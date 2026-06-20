@@ -3,7 +3,7 @@ import usePageTitle from '../hooks/usePageTitle';
 export default function Bio() {
   usePageTitle(
     'Biography',
-    'The story of Alexander Xhoja — Boston-based pianist, composer, Berklee College of Music graduate, and founder of Xhoja Music Agency.'
+    'Alexander Xhoja — pianist and composer based between Boston and Los Angeles, a Berklee College of Music graduate and founder of Xhoja Music Agency.'
   );
 
   return (
@@ -20,7 +20,7 @@ export default function Bio() {
             </h1>
             <div className="h-px w-20 bg-bronze mb-10" />
             <p className="font-serif italic text-[19px] leading-[1.65] text-graphite max-w-md">
-              Berklee-trained. Boston-grown. Founded a music agency, kept the bench warm at jazz festivals, and still has Chick Corea's voice in his head.
+              Pianist, composer, and bandleader — Berklee-trained, based between Boston and Los Angeles.
             </p>
           </div>
           <div className="lg:col-span-6">
@@ -40,19 +40,19 @@ export default function Bio() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <article className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8]">
             <p className="first-letter:font-display first-letter:text-[88px] first-letter:leading-[0.85] first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:text-bronze">
-              Alexander Xhoja is a pianist and composer based between Boston and Los Angeles, and a graduate of Berklee College of Music, where he studied on a full-ride scholarship. With dedication and emotional depth, he enriches the lives of his listeners by weaving feeling into every line he plays.
+              Alexander Xhoja is a pianist and composer based between Boston and Los Angeles, and a graduate of Berklee College of Music, where he studied on a full scholarship. He works across jazz and classical music — as a soloist, with his trio, and as a composer and arranger.
             </p>
 
             <p className="mt-10">
-              His musical journey began at age five. Through his piano teacher and music-enthusiast father, Alexander was immersed in the music culture early. Rather than start with formal training, he developed his musicianship the old way — by listening, imitating his heroes, and learning what worked by ear. As the years went on, he transitioned from novice to a formidable pianist with mature improvisational instincts and a real talent for composing and arranging.
+              He began at five, immersed early through his father and his first piano teacher. Rather than start with formal training, he learned the way many of his heroes did — by ear, listening and imitating until the music made sense from the inside. Formal study came later, and with it the technique to carry the instinct.
             </p>
 
             <p className="mt-8">
-              At age 11, Alexander was already performing across the greater Boston area alongside seasoned musicians. At 15, he secured a one-year residence with his trio at <span className="italic">Central Cafe</span>. Along the way he studied with respected pianists including <span className="italic">Damon Carter</span>, <span className="italic">Max Haymer</span>, <span className="italic">Plamen Karadonev</span>, and <span className="italic">Yoko Miwa</span>.
+              By eleven he was performing around greater Boston alongside seasoned musicians; at fifteen he held a year-long trio residency at <span className="italic">Central Cafe</span>. He went on to study with pianists <span className="italic">Damon Carter</span>, <span className="italic">Max Haymer</span>, <span className="italic">Plamen Karadonev</span>, and <span className="italic">Yoko Miwa</span>.
             </p>
 
             <p className="mt-8">
-              His biggest inspiration was <span className="italic">Chick Corea</span>. Through each of Corea's concerts, his admiration grew — and his fondest memory of his hero came backstage, where Corea told him a line that has stayed with him ever since:
+              Among his influences, none looms larger than <span className="italic">Chick Corea</span>. The two met backstage after one of Corea's concerts, where Corea offered him a line he has carried ever since:
             </p>
           </article>
         </div>
@@ -77,19 +77,19 @@ export default function Bio() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <article className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8] space-y-8">
             <p>
-              In 2023, Alexander received the <span className="italic">Most Valuable Player</span> award from the Massachusetts Association of Jazz Education. He has performed at the Mingus Festival, where he was later invited to sit in with the Mingus Big Band; held the piano bench for the Massachusetts All-State Jazz Ensemble; and won numerous state and regional awards for his musicianship.
+              He opened Berklee's commencement ceremony with a solo piano performance at Agganis Arena. In 2023 he received the Massachusetts Association of Jazz Education's <span className="italic">Most Valuable Player</span> award; he has performed at the Mingus Festival and been invited to sit in with the Mingus Big Band, held the piano bench for the Massachusetts All-State Jazz Ensemble, and performed internationally, from Paris to Lagos.
             </p>
 
             <p>
-              Today Alexander remains a working, gigging musician — performing solo and with his trio at venues across Boston, New York, Los Angeles, and beyond. His strong creative and composing skills make him a passionate advocate for jazz as a living, breathing genre. As an artist, he strives for emotional integrity in every set, and uses his music to tell stories worth listening to.
+              Today he performs as a soloist and with his trio across Boston, New York, Los Angeles, and beyond, and writes for the stage and screen. He remains, at heart, an advocate for jazz as a living tradition — music made in the moment.
             </p>
 
             <p>
-              He is also the founder of <a href="https://xhojamusicagency.com" className="text-bronze hover:text-bronze-light underline decoration-rule underline-offset-4">Xhoja Music Agency</a>, a Boston music-booking agency that places live music — solo pianists, jazz ensembles, classical quartets, and DJs — into hotels, weddings, churches, senior communities, and private events throughout the Greater Boston metro and South Shore.
+              He is also the founder of <a href="https://xhojamusicagency.com" className="text-bronze hover:text-bronze-light underline decoration-rule underline-offset-4">Xhoja Music Agency</a>, a Boston music-booking agency that places live music — solo pianists, jazz ensembles, classical quartets, and DJs — into hotels, weddings, churches, senior communities, and private events across the Greater Boston metro and South Shore.
             </p>
 
             <p className="text-graphite italic">
-              The mission, in both performance and agency work, is the same: to enrich lives through music — meaningful moments with world-class performances.
+              The thread through all of it stays the same: music that means something.
             </p>
           </article>
         </div>
@@ -99,16 +99,17 @@ export default function Bio() {
       <section className="py-24 md:py-32 bg-ivory">
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-10 text-center">
-            Selected Honors & Recognition
+            Selected Honors &amp; Recognition
           </p>
           <ul className="space-y-5 font-serif text-charcoal/85 text-[18px] leading-[1.6]">
             {[
-              'Full-Ride Scholarship — Berklee College of Music',
+              'Opened Berklee commencement — solo piano, Agganis Arena',
+              'Full Scholarship — Berklee College of Music',
               'Most Valuable Player — Massachusetts Association of Jazz Education (2023)',
               'Invited to sit in with the Mingus Big Band — Mingus Festival',
               'Piano Bench — Massachusetts All-State Jazz Ensemble',
-              'One-year residency with trio — Central Cafe',
-              'Multiple state and regional awards for musicianship',
+              'One-year trio residency — Central Cafe',
+              'International performances — Paris · Lagos · Spain',
             ].map((honor) => (
               <li key={honor} className="grid grid-cols-[auto_1fr] gap-4 items-baseline">
                 <span className="text-bronze">·</span>
