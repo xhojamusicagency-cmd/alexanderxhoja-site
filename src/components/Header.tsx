@@ -25,12 +25,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav — small caps, lots of breathing room */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <Link
               key={link.href}
               to={link.href}
-              className={`font-serif text-[17px] transition-colors ${
+              className={`font-serif text-[20px] transition-colors ${
                 location.pathname === link.href
                   ? 'text-bronze'
                   : 'text-graphite hover:text-bronze'
