@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import usePageTitle from '../hooks/usePageTitle';
+import { submitToWeb3Forms } from '../utils/web3forms';
 
 const SMS = 'sms:+18574988487';
 const TEL = 'tel:+18574988487';
@@ -48,18 +49,20 @@ export default function Lessons() {
   );
 
   const [status, setStatus] = useState<Status>('idle');
+  const [sentVia, setSentVia] = useState<'form' | 'mailto'>('form');
   const [honeypot, setHoneypot] = useState('');
   const [mountedAt] = useState(() => Date.now());
   const [activeVideo, setActiveVideo] = useState(HEAR[0]);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (honeypot) return;
     if (Date.now() - mountedAt < 2000) return;
+    setStatus('sending');
     const fd = new FormData(e.currentTarget);
     const name = (fd.get('name') as string) || '';
     const phone = (fd.get('phone') as string) || '';
-    const email = (fd.get('email') as string) || 'not provided';
+    const email = (fd.get('email') as string) || '';
     const about = (fd.get('about') as string) || '';
 
     const subject = `Piano lesson inquiry — ${name}`;
@@ -68,13 +71,25 @@ export default function Lessons() {
       `I'd like to set up a welcome lesson.\n\n` +
       `Name:  ${name}\n` +
       `Phone: ${phone}\n` +
-      `Email: ${email}\n\n` +
+      `Email: ${email || 'not provided'}\n\n` +
       `Who it's for & level:\n${about}\n\n` +
       `— sent from pianowithalexander.com`;
 
+    // Primary: deliver straight to the inbox (no "hit send" step for the visitor).
+    const fields: Record<string, string> = { subject, from_name: name, phone, message: body };
+    if (email) fields.email = email;
+    const delivered = await submitToWeb3Forms(fields);
+    if (delivered) {
+      setSentVia('form');
+      setStatus('sent');
+      return;
+    }
+
+    // Fallback: open a pre-filled draft so a lead is never silently lost.
+    setSentVia('mailto');
+    setStatus('sent');
     window.location.href =
       `mailto:pianowithalexander@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setStatus('sent');
   }
 
   return (
@@ -91,7 +106,7 @@ export default function Lessons() {
             </h1>
             <div className="h-px w-20 bg-bronze mb-8" />
             <p className="font-serif text-[19px] sm:text-[21px] leading-[1.6] text-graphite max-w-xl mb-10">
-              A working concert pianist — Berklee-trained, who's opened the Berklee commencement concert and played jazz rooms like <span className="text-charcoal">Regattabar</span>. Now <span className="text-charcoal">Alexander Xhoja</span> brings it to your piano, one-on-one — real musicianship, all ages and levels, across the Westside. A few new students each season.
+              A working concert pianist — Berklee-trained, who's opened the Berklee commencement concert and played storied jazz rooms. Now <span className="text-charcoal">Alexander Xhoja</span> brings it to your piano, one-on-one — real musicianship, all ages and levels, across the Westside. A few new students each season.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
               <a href="#book" className="inline-block text-center bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors">
@@ -161,23 +176,6 @@ export default function Lessons() {
           <p className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8] mt-7">
             He does not treat piano as a chore to get through. He teaches you to <span className="italic">make music</span> — so you actually want to sit down and play.
           </p>
-        </div>
-      </section>
-
-      {/* ===================== THE COREA MOMENT — signature pull quote ===================== */}
-      <section className="bg-charcoal text-ivory py-24 md:py-32">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <blockquote>
-            <p className="font-display italic text-3xl sm:text-5xl lg:text-[56px] leading-[1.15] text-ivory mb-8">
-              "This world needs<br />more pianists like us."
-            </p>
-            <footer>
-              <span className="block h-px w-12 bg-bronze-light mx-auto mb-5" />
-              <span className="font-sans text-[11px] tracking-[0.22em] uppercase text-ivory/65">
-                — Chick Corea, to Alexander, backstage
-              </span>
-            </footer>
-          </blockquote>
         </div>
       </section>
 
@@ -254,10 +252,21 @@ export default function Lessons() {
 
           {status === 'sent' ? (
             <div className="text-center py-16 border-t border-b border-ivory/15">
-              <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-4">One last tap — hit send</p>
-              <p className="font-serif italic text-ivory text-[20px] leading-relaxed">
-                Your welcome-lesson note just opened in your email — give it a quick send and I'll text you back, usually within the hour. Rather skip it? Text me directly at <a href={SMS} className="underline decoration-bronze-light underline-offset-4">(857) 498-8487</a>.
-              </p>
+              {sentVia === 'form' ? (
+                <>
+                  <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-4">Got it — talk soon</p>
+                  <p className="font-serif italic text-ivory text-[20px] leading-relaxed">
+                    Thank you — I have your request and I'll text you back, usually within the hour, to set up your welcome lesson. In a hurry? Text me at <a href={SMS} className="underline decoration-bronze-light underline-offset-4">(857) 498-8487</a>.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-4">One last tap — hit send</p>
+                  <p className="font-serif italic text-ivory text-[20px] leading-relaxed">
+                    Your welcome-lesson note just opened in your email — give it a quick send and I'll text you back, usually within the hour. Rather skip it? Text me directly at <a href={SMS} className="underline decoration-bronze-light underline-offset-4">(857) 498-8487</a>.
+                  </p>
+                </>
+              )}
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-7">
