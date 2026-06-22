@@ -1,6 +1,4 @@
 import { useState, type FormEvent } from 'react';
-import emailjs from '@emailjs/browser';
-import { EMAILJS_CONFIG } from '../utils/emailjs';
 import usePageTitle from '../hooks/usePageTitle';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
@@ -12,37 +10,33 @@ export default function Contact() {
   const [honeypot, setHoneypot] = useState('');
   const [mountedAt] = useState(() => Date.now());
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (honeypot) return;
     if (Date.now() - mountedAt < 3000) return;
-    setStatus('sending');
 
     const formData = new FormData(e.currentTarget);
-    const payload = {
-      from_name: formData.get('name') as string,
-      from_email: formData.get('email') as string,
-      phone: (formData.get('phone') as string) || 'not provided',
-      inquiry_type: formData.get('inquiry_type') as string,
-      event_date: (formData.get('event_date') as string) || 'TBD',
-      message: formData.get('message') as string,
-      to_name: 'Alexander Xhoja',
-      to_email: (formData.get('inquiry_type') === 'Private Lessons') ? 'pianowithalexander@gmail.com' : 'alexanderxhoja@gmail.com',
-    };
+    const name = (formData.get('name') as string) || '';
+    const email = (formData.get('email') as string) || 'not provided';
+    const phone = (formData.get('phone') as string) || 'not provided';
+    const inquiryType = (formData.get('inquiry_type') as string) || 'Inquiry';
+    const eventDate = (formData.get('event_date') as string) || 'TBD';
+    const message = (formData.get('message') as string) || '';
 
-    try {
-      await emailjs.send(
-        EMAILJS_CONFIG.SERVICE_ID,
-        EMAILJS_CONFIG.CONTACT_TEMPLATE,
-        payload,
-        EMAILJS_CONFIG.PUBLIC_KEY
-      );
-      setStatus('sent');
-      (e.currentTarget as HTMLFormElement).reset();
-    } catch (err) {
-      console.error(err);
-      setStatus('error');
-    }
+    const recipient = inquiryType === 'Private Lessons' ? 'pianowithalexander@gmail.com' : 'alexanderxhoja@gmail.com';
+    const subject = `${inquiryType} — ${name}`;
+    const body =
+      `Name:  ${name}\n` +
+      `Email: ${email}\n` +
+      `Phone: ${phone}\n` +
+      `Inquiry: ${inquiryType}\n` +
+      `Event date: ${eventDate}\n\n` +
+      `${message}\n\n` +
+      `— sent from pianowithalexander.com`;
+
+    window.location.href =
+      `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setStatus('sent');
   }
 
   return (
@@ -66,10 +60,10 @@ export default function Contact() {
         {status === 'sent' ? (
           <div className="text-center py-20 border-t border-b border-rule">
             <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-4">
-              Message sent
+              One last tap — hit send
             </p>
             <p className="font-serif italic text-charcoal text-[20px] leading-relaxed">
-              Thank you for reaching out. Alexander will respond within 2 business days.
+              Your message just opened in your email app — give it a quick send and Alexander will respond within 2 business days.
             </p>
           </div>
         ) : (

@@ -1,6 +1,4 @@
 import { useState, type FormEvent } from 'react';
-import emailjs from '@emailjs/browser';
-import { EMAILJS_CONFIG } from '../utils/emailjs';
 import usePageTitle from '../hooks/usePageTitle';
 
 const SMS = 'sms:+18574988487';
@@ -54,30 +52,29 @@ export default function Lessons() {
   const [mountedAt] = useState(() => Date.now());
   const [activeVideo, setActiveVideo] = useState(HEAR[0]);
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (honeypot) return;
     if (Date.now() - mountedAt < 2000) return;
-    setStatus('sending');
     const fd = new FormData(e.currentTarget);
-    const payload = {
-      from_name: fd.get('name') as string,
-      from_email: (fd.get('email') as string) || 'not provided',
-      phone: (fd.get('phone') as string) || 'not provided',
-      inquiry_type: 'Private Lessons',
-      to_email: 'pianowithalexander@gmail.com',
-      event_date: 'N/A',
-      message: `[LESSONS PAGE — welcome lesson request] Student / level: ${fd.get('about') as string}`,
-      to_name: 'Alexander Xhoja',
-    };
-    try {
-      await emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.CONTACT_TEMPLATE, payload, EMAILJS_CONFIG.PUBLIC_KEY);
-      setStatus('sent');
-      (e.currentTarget as HTMLFormElement).reset();
-    } catch (err) {
-      console.error(err);
-      setStatus('error');
-    }
+    const name = (fd.get('name') as string) || '';
+    const phone = (fd.get('phone') as string) || '';
+    const email = (fd.get('email') as string) || 'not provided';
+    const about = (fd.get('about') as string) || '';
+
+    const subject = `Piano lesson inquiry — ${name}`;
+    const body =
+      `Hi Alexander,\n\n` +
+      `I'd like to set up a welcome lesson.\n\n` +
+      `Name:  ${name}\n` +
+      `Phone: ${phone}\n` +
+      `Email: ${email}\n\n` +
+      `Who it's for & level:\n${about}\n\n` +
+      `— sent from pianowithalexander.com`;
+
+    window.location.href =
+      `mailto:pianowithalexander@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setStatus('sent');
   }
 
   return (
@@ -257,9 +254,9 @@ export default function Lessons() {
 
           {status === 'sent' ? (
             <div className="text-center py-16 border-t border-b border-ivory/15">
-              <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-4">Got it — talk soon</p>
+              <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-4">One last tap — hit send</p>
               <p className="font-serif italic text-ivory text-[20px] leading-relaxed">
-                Thank you. I'll be in touch shortly to arrange your welcome lesson. In a hurry? Text me at <a href={TEL} className="underline decoration-bronze-light underline-offset-4">(857) 498-8487</a>.
+                Your welcome-lesson note just opened in your email — give it a quick send and I'll text you back, usually within the hour. Rather skip it? Text me directly at <a href={SMS} className="underline decoration-bronze-light underline-offset-4">(857) 498-8487</a>.
               </p>
             </div>
           ) : (
