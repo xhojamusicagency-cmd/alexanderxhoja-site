@@ -59,7 +59,7 @@ export default function Home() {
             </h1>
             <div className="mt-10 flex flex-col sm:flex-row gap-8 sm:items-end sm:justify-between">
               <p className="font-serif italic text-[20px] sm:text-[22px] text-graphite leading-[1.55] max-w-md">
-                A Los Angeles pianist. Jazz and classical, solo and trio.
+                A Los Angeles pianist, Berklee-trained on a full scholarship — at home in jazz and classical, solo and with his trio.
               </p>
               <Link
                 to="/videos"
@@ -77,8 +77,8 @@ export default function Home() {
       {/* ============================================================ */}
       <section className="border-y border-rule bg-ivory">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 py-8 sm:py-6 flex flex-col sm:flex-row items-center gap-y-4 sm:gap-x-12 sm:justify-between">
-          <Credential label="Berklee" value="Full Scholarship" />
-          <Credential label="MA Jazz Educators" value="2023 MVP" />
+          <Credential label="Full Scholarship" value="Berklee College of Music" />
+          <Credential label="MVP · 2023" value="Massachusetts Association of Jazz Education" />
         </div>
       </section>
 
@@ -227,7 +227,7 @@ function Credential({ label, value }: { label: string; value: string }) {
       <span className="font-sans text-[10px] tracking-label uppercase text-bronze whitespace-nowrap">
         {label}
       </span>
-      <span className="font-display italic text-[17px] sm:text-[19px] text-charcoal whitespace-nowrap">
+      <span className="font-display italic text-[17px] sm:text-[19px] text-charcoal">
         {value}
       </span>
     </div>
