@@ -24,13 +24,7 @@ const transformations = [
 
 const credentials = [
   { t: 'Bachelor of Music, Piano Performance', d: 'Berklee College of Music — full scholarship' },
-  { t: 'Opened the Berklee commencement concert', d: 'Solo piano intro · Agganis Arena' },
-  { t: "3.9 GPA · Dean's List", d: 'Berklee College of Music' },
   { t: '"Most Valuable Player," 2023', d: 'Massachusetts Association of Jazz Education' },
-  { t: 'Invited to sit in with the Mingus Big Band', d: 'Mingus Festival' },
-  { t: 'Performed at Regattabar', d: 'Cambridge jazz club' },
-  { t: 'Film composer', d: 'Adventures in Peterland (2024)' },
-  { t: 'Performed internationally', d: 'Paris · Lagos · Spain' },
 ];
 
 const HEAR = [
@@ -106,7 +100,7 @@ export default function Lessons() {
             </h1>
             <div className="h-px w-20 bg-bronze mb-8" />
             <p className="font-serif text-[19px] sm:text-[21px] leading-[1.6] text-graphite max-w-xl mb-10">
-              A working concert pianist — Berklee-trained, who's opened the Berklee commencement concert and played storied jazz rooms. Now <span className="text-charcoal">Alexander Xhoja</span> brings it to your piano, one-on-one — real musicianship, all ages and levels, across the Westside. A few new students each season.
+              A working concert pianist — Berklee-trained on a full scholarship. Now <span className="text-charcoal">Alexander Xhoja</span> brings it to your piano, one-on-one — real musicianship, all ages and levels, across the Westside. A few new students each season.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
               <a href="#book" className="inline-block text-center bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors">
