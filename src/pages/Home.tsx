@@ -5,7 +5,7 @@ import usePageTitle from '../hooks/usePageTitle';
 const REEL = [
   {
     title: 'Black Orpheus',
-    context: 'Solo · Live at Berk Recital Hall',
+    context: 'Solo',
     youtubeId: 'eypWkhHFrqU',
   },
   {
@@ -20,21 +20,10 @@ const REEL = [
   },
 ];
 
-const PRESTIGE_VENUES = [
-  'Regattabar · Cambridge',
-  'Lee and Alma Berk Recital Hall',
-  'David Friend Recital Hall',
-  'MIT · Cambridge',
-  'The New School · NYC',
-  'Berklee Colvin Hall',
-  'Allen Center for the Arts',
-  'Hunneman Hall · Boston',
-];
-
 export default function Home() {
   usePageTitle(
     undefined,
-    'Alexander Xhoja — a Los Angeles pianist, composer, and Berklee College of Music full-scholarship graduate. Concert performances and private piano lessons across the Westside.'
+    'Alexander Xhoja — a Los Angeles pianist, composer, and private piano teacher. Performances and lessons across the Westside.'
   );
 
   return (
@@ -70,7 +59,7 @@ export default function Home() {
             </h1>
             <div className="mt-10 flex flex-col sm:flex-row gap-8 sm:items-end sm:justify-between">
               <p className="font-serif italic text-[20px] sm:text-[22px] text-graphite leading-[1.55] max-w-md">
-                A Los Angeles pianist telling stories through the keys — jazz, classical, and the rooms in between.
+                A Los Angeles pianist. Jazz and classical, solo and trio.
               </p>
               <Link
                 to="/videos"
@@ -89,9 +78,7 @@ export default function Home() {
       <section className="border-y border-rule bg-ivory">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 py-8 sm:py-6 flex flex-col sm:flex-row items-center gap-y-4 sm:gap-x-12 sm:justify-between">
           <Credential label="Berklee" value="Full Scholarship" />
-          <Credential label="Berklee Commencement" value="Opening Soloist" />
           <Credential label="MA Jazz Educators" value="2023 MVP" />
-          <Credential label="Mingus Big Band" value="Invited Sit-In" />
         </div>
       </section>
 
@@ -144,24 +131,16 @@ export default function Home() {
       </section>
 
       {/* ============================================================ */}
-      {/* THE QUOTE — Chick Corea moment, hero treatment                */}
+      {/* INTERLUDE — quiet dark band                                   */}
       {/* ============================================================ */}
       <section className="bg-charcoal text-ivory py-28 md:py-40">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-12">
-            Said to Alexander, backstage
+            Influence
           </p>
-          <blockquote>
-            <p className="font-display italic text-3xl sm:text-5xl lg:text-[72px] leading-[1.1] text-ivory mb-12">
-              "This world needs<br />more pianists<br />like us."
-            </p>
-            <footer>
-              <span className="block h-px w-12 bg-bronze-light mx-auto mb-5" />
-              <span className="font-sans text-[11px] tracking-[0.22em] uppercase text-ivory/65">
-                — Chick Corea
-              </span>
-            </footer>
-          </blockquote>
+          <p className="font-display italic text-3xl sm:text-5xl lg:text-[64px] leading-[1.1] text-ivory">
+            His biggest influence<br />is Chick Corea.
+          </p>
         </div>
       </section>
 
@@ -189,10 +168,10 @@ export default function Home() {
               </h2>
               <div className="h-px w-16 bg-bronze mb-10" />
               <p className="font-serif text-[19px] sm:text-[21px] text-charcoal/85 leading-[1.75] mb-6">
-                Alexander Xhoja began playing at the age of five. At eleven he was performing across the greater Boston area alongside seasoned musicians. By fifteen he held a one-year trio residency at <em>Central Cafe</em>. Today he is a Berklee College of Music full-scholarship graduate, a Massachusetts Association of Jazz Education Most Valuable Player, and the founder of <a href="https://xhojamusicagency.com" className="text-bronze hover:text-bronze-light underline decoration-rule underline-offset-4">Xhoja Music Agency</a>.
+                Alexander Xhoja began playing at five, learning by ear. He went to Berklee College of Music on a full scholarship and was named a Most Valuable Player by the Massachusetts Association of Jazz Education in 2023. He is based in Los Angeles and is the founder of <a href="https://xhojamusicagency.com" className="text-bronze hover:text-bronze-light underline decoration-rule underline-offset-4">Xhoja Music Agency</a>.
               </p>
               <p className="font-serif italic text-[18px] text-graphite leading-[1.7] mb-10 max-w-md">
-                His biggest influence was Chick Corea. The mission stays the same: emotional integrity in every set.
+                He plays jazz and classical, as a soloist and with his trio.
               </p>
               <Link
                 to="/bio"
@@ -206,23 +185,16 @@ export default function Home() {
       </section>
 
       {/* ============================================================ */}
-      {/* PRESTIGE VENUES — single line of credibility-builders         */}
+      {/* LIVE — one quiet line                                         */}
       {/* ============================================================ */}
       <section className="bg-ivory-deep py-20 md:py-28 border-y border-rule">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 text-center">
           <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-10">
-            Selected Venues
+            Live
           </p>
-          <ul className="flex flex-wrap justify-center gap-x-10 gap-y-5 max-w-4xl mx-auto">
-            {PRESTIGE_VENUES.map((venue) => (
-              <li
-                key={venue}
-                className="font-display italic text-[20px] sm:text-[24px] text-charcoal leading-tight"
-              >
-                {venue}
-              </li>
-            ))}
-          </ul>
+          <p className="font-display italic text-[24px] sm:text-[30px] text-charcoal leading-snug max-w-2xl mx-auto">
+            Concert halls, clubs, and private rooms — solo and with the trio.
+          </p>
         </div>
       </section>
 

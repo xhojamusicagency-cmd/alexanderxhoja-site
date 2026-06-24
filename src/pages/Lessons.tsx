@@ -18,7 +18,7 @@ const transformations = [
   },
   {
     who: 'For the serious student',
-    d: 'Recital, competition, audition, and conservatory preparation — with a teacher who has walked through the doors you are aiming at.',
+    d: 'Recital, competition, audition, and conservatory preparation — with a teacher who has done the auditions you are preparing for.',
   },
 ];
 
@@ -165,7 +165,7 @@ export default function Lessons() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-8">Why study with Alexander</p>
           <p className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8]">
-            Alexander started at five and learned the way his heroes did — by ear, by feel, chasing the sound until it was his own. By eleven he was performing across Boston alongside seasoned musicians; at Berklee College of Music he studied on a full scholarship. He has performed from Paris to Los Angeles, and has spent years teaching students from their very first notes to conservatory auditions.
+            Alexander started at five and learned the way his heroes did — by ear, by feel, chasing the sound until it was his own. By eleven he was playing gigs around Boston; he went on to study at Berklee College of Music on a full scholarship. He still performs, and he has spent years teaching students — from their first notes to conservatory auditions.
           </p>
           <p className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8] mt-7">
             He does not treat piano as a chore to get through. He teaches you to <span className="italic">make music</span> — so you actually want to sit down and play.
