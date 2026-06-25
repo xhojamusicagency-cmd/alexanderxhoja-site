@@ -135,12 +135,17 @@ export default function Home() {
       {/* ============================================================ */}
       <section className="bg-charcoal text-ivory py-28 md:py-40">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-12">
-            Influence
-          </p>
-          <p className="font-display italic text-3xl sm:text-5xl lg:text-[64px] leading-[1.1] text-ivory">
-            His biggest influence<br />is Chick Corea.
-          </p>
+          <blockquote>
+            <p className="font-display italic text-3xl sm:text-5xl lg:text-[68px] leading-[1.12] text-ivory">
+              “This world needs<br />more pianists like us.”
+            </p>
+            <footer className="mt-12">
+              <span className="block h-px w-12 bg-bronze-light mx-auto mb-6" />
+              <span className="font-sans text-[11px] tracking-[0.22em] uppercase text-ivory/60">
+                Chick Corea, to Alexander
+              </span>
+            </footer>
+          </blockquote>
         </div>
       </section>
 
