@@ -84,7 +84,7 @@ export default function Bio() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <article className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8] space-y-8">
             <p>
-              Today, based in Los Angeles, he performs as a soloist and composes for the screen. He also teaches — privately, across the Westside — handing down what was handed to him: not just how to play the notes, but how to mean them.
+              Today, based in Los Angeles, he performs as a soloist and writes his own music. He also teaches — privately, across the Westside — handing down what was handed to him: not just how to play the notes, but how to mean them.
             </p>
 
             <p>
