@@ -192,12 +192,19 @@ export default function Home() {
       {/* ============================================================ */}
       {/* LIVE — one quiet line                                         */}
       {/* ============================================================ */}
-      <section className="bg-ivory-deep py-20 md:py-28 border-y border-rule">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 text-center">
-          <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-10">
+      <section className="relative overflow-hidden bg-charcoal py-32 md:py-44">
+        <img
+          src="/alexander-xhoja-concert.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-[center_30%] opacity-[0.28]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-charcoal/55 to-charcoal/85" />
+        <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 text-center">
+          <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-10">
             Live
           </p>
-          <p className="font-display italic text-[24px] sm:text-[30px] text-charcoal leading-snug max-w-2xl mx-auto">
+          <p className="font-display italic text-[28px] sm:text-[40px] text-ivory leading-snug max-w-2xl mx-auto">
             Concert halls, clubs, and private rooms — solo and with the trio.
           </p>
         </div>
