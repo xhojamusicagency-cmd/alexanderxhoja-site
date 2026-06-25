@@ -59,7 +59,7 @@ export default function Home() {
             </h1>
             <div className="mt-10 flex flex-col sm:flex-row gap-8 sm:items-end sm:justify-between">
               <p className="font-serif italic text-[20px] sm:text-[22px] text-graphite leading-[1.55] max-w-md">
-                A Los Angeles pianist, Berklee-trained on a full scholarship — at home in jazz and classical, solo and with his trio.
+                A Los Angeles pianist and composer, Berklee-trained on a full scholarship.
               </p>
               <Link
                 to="/videos"
@@ -176,7 +176,7 @@ export default function Home() {
                 Alexander Xhoja began playing at five, learning by ear. He went to Berklee College of Music on a full scholarship and was named a Most Valuable Player by the Massachusetts Association of Jazz Education in 2023. He is based in Los Angeles and is the founder of <a href="https://xhojamusicagency.com" className="text-bronze hover:text-bronze-light underline decoration-rule underline-offset-4">Xhoja Music Agency</a>.
               </p>
               <p className="font-serif italic text-[18px] text-graphite leading-[1.7] mb-10 max-w-md">
-                He plays jazz and classical, as a soloist and with his trio.
+                He plays jazz and classical.
               </p>
               <Link
                 to="/bio"
@@ -205,7 +205,7 @@ export default function Home() {
             Live
           </p>
           <p className="font-display italic text-[28px] sm:text-[40px] text-ivory leading-snug max-w-2xl mx-auto">
-            Concert halls, clubs, and private rooms — solo and with the trio.
+            Concert halls, clubs, and private rooms.
           </p>
         </div>
       </section>

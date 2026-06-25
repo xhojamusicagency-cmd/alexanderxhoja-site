@@ -40,7 +40,7 @@ export default function Bio() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <article className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8]">
             <p className="first-letter:font-display first-letter:text-[88px] first-letter:leading-[0.85] first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:text-bronze">
-              Alexander Xhoja is a Los Angeles–based pianist and composer. He studied at Berklee College of Music on a full scholarship and graduated from the program. He plays jazz and classical — as a soloist, with his trio, and as a composer and arranger.
+              Alexander Xhoja is a Los Angeles–based pianist and composer. He studied at Berklee College of Music on a full scholarship and graduated from the program. He plays jazz and classical — as a soloist, with his band, and as a composer.
             </p>
 
             <p className="mt-10">
@@ -48,7 +48,7 @@ export default function Bio() {
             </p>
 
             <p className="mt-8">
-              By eleven he was playing around Boston; at fifteen he held a year-long trio residency at <span className="italic">Central Cafe</span>. He studied with the pianists <span className="italic">Damon Carter</span>, <span className="italic">Max Haymer</span>, <span className="italic">Plamen Karadonev</span>, and <span className="italic">Yoko Miwa</span>.
+              By eleven he was playing around Boston; at fifteen he held a year-long residency at <span className="italic">Central Cafe</span>. He studied with the pianists <span className="italic">Damon Carter</span>, <span className="italic">Max Haymer</span>, <span className="italic">Plamen Karadonev</span>, and <span className="italic">Yoko Miwa</span>.
             </p>
 
             <p className="mt-8">
@@ -67,7 +67,7 @@ export default function Bio() {
             </p>
 
             <p>
-              He plays as a soloist and with his trio, and writes for the stage and screen. Mostly he works in jazz — music made in the moment.
+              He performs, and writes for the stage and screen. Mostly he works in jazz — music made in the moment.
             </p>
 
             <p>
