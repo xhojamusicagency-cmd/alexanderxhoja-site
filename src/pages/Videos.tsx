@@ -85,7 +85,8 @@ export default function Videos() {
                 i === activeIndex ? 'ring-1 ring-bronze' : ''
               }`}>
                 <img
-                  src={`https://i.ytimg.com/vi/${v.youtubeId}/hqdefault.jpg`}
+                  src={`https://i.ytimg.com/vi/${v.youtubeId}/maxresdefault.jpg`}
+                  onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = `https://i.ytimg.com/vi/${v.youtubeId}/hqdefault.jpg`; }}
                   alt={v.title}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 />

@@ -4,9 +4,9 @@ import usePageTitle from '../hooks/usePageTitle';
 // Curated reel of the strongest performances surfaced on the homepage
 const REEL = [
   {
-    title: 'Black Orpheus',
-    context: 'Solo',
-    youtubeId: 'eypWkhHFrqU',
+    title: 'Beautiful Love',
+    context: 'Solo piano',
+    youtubeId: 'noISudgBnYA',
   },
   {
     title: 'Million Years Ago',
@@ -78,7 +78,7 @@ export default function Home() {
       <section className="border-y border-rule bg-ivory">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 py-8 sm:py-6 flex flex-col sm:flex-row items-center gap-y-4 sm:gap-x-12 sm:justify-between">
           <Credential label="Full Scholarship" value="Berklee College of Music" />
-          <Credential label="MVP · 2023" value="Massachusetts Association of Jazz Education" />
+          <Credential label="MVP" value="Massachusetts Association of Jazz Education" />
         </div>
       </section>
 
@@ -109,7 +109,7 @@ export default function Home() {
               <Link key={v.youtubeId} to="/videos" className="group block">
                 <div className="relative aspect-video overflow-hidden bg-ivory-deep mb-5">
                   <img
-                    src={`https://i.ytimg.com/vi/${v.youtubeId}/hqdefault.jpg`}
+                    src={`https://i.ytimg.com/vi/${v.youtubeId}/maxresdefault.jpg`}
                     alt={v.title}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                   />
@@ -173,10 +173,10 @@ export default function Home() {
               </h2>
               <div className="h-px w-16 bg-bronze mb-10" />
               <p className="font-serif text-[19px] sm:text-[21px] text-charcoal/85 leading-[1.75] mb-6">
-                Alexander Xhoja began playing at five, learning by ear. He went to Berklee College of Music on a full scholarship and was named a Most Valuable Player by the Massachusetts Association of Jazz Education in 2023. He is based in Los Angeles and is the founder of <a href="https://xhojamusicagency.com" className="text-bronze hover:text-bronze-light underline decoration-rule underline-offset-4">Xhoja Music Agency</a>.
+                Alexander Xhoja sat down at the piano at five and started improvising — finding the music by ear, before he could read a note. He went on to Berklee College of Music on a full scholarship, and today he performs and teaches across Los Angeles.
               </p>
               <p className="font-serif italic text-[18px] text-graphite leading-[1.7] mb-10 max-w-md">
-                He plays jazz and classical.
+                His playing moves across classical, jazz, and pop.
               </p>
               <Link
                 to="/bio"

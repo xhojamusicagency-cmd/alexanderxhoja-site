@@ -24,7 +24,7 @@ const transformations = [
 
 const credentials = [
   { t: 'Bachelor of Music, Piano Performance', d: 'Berklee College of Music — full scholarship' },
-  { t: '"Most Valuable Player," 2023', d: 'Massachusetts Association of Jazz Education' },
+  { t: '"Most Valuable Player"', d: 'Massachusetts Association of Jazz Education' },
 ];
 
 const HEAR = [

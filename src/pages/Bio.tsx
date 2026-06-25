@@ -3,7 +3,7 @@ import usePageTitle from '../hooks/usePageTitle';
 export default function Bio() {
   usePageTitle(
     'Biography',
-    'Alexander Xhoja — pianist and composer based between Boston and Los Angeles, a Berklee College of Music graduate and founder of Xhoja Music Agency.'
+    'Alexander Xhoja — a Los Angeles pianist, composer, and improviser. Berklee College of Music, full scholarship. Classical, jazz, and beyond.'
   );
 
   return (
@@ -20,7 +20,7 @@ export default function Bio() {
             </h1>
             <div className="h-px w-20 bg-bronze mb-10" />
             <p className="font-serif italic text-[19px] leading-[1.65] text-graphite max-w-md">
-              Pianist, composer, and bandleader — Berklee-trained, based in Los Angeles.
+              Pianist, composer, and improviser — Berklee-trained, based in Los Angeles.
             </p>
           </div>
           <div className="lg:col-span-6">
@@ -40,21 +40,42 @@ export default function Bio() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <article className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8]">
             <p className="first-letter:font-display first-letter:text-[88px] first-letter:leading-[0.85] first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:text-bronze">
-              Alexander Xhoja is a Los Angeles–based pianist and composer. He studied at Berklee College of Music on a full scholarship and graduated from the program. He plays jazz and classical — as a soloist, with his band, and as a composer.
+              Alexander Xhoja sat down at the piano at five years old and started making things up. Before he could read a note, he could hear one — and answer it. That instinct — the pull to improvise, to find the music in the moment instead of on the page — has been the center of everything he plays ever since.
             </p>
 
             <p className="mt-10">
-              He started at five, around his father and his first piano teacher. Before any formal training, he learned by ear — listening and copying until the music made sense from the inside. The study came later.
+              He learned the way his heroes had: by ear, by feel, chasing a sound until it was his own. Formal training came later, and with it the craft to carry the instinct — but the heart of his playing never changed. He listens, and he answers. No two performances are ever quite the same, because no two moments are.
             </p>
 
             <p className="mt-8">
-              By eleven he was playing around Boston; at fifteen he held a year-long residency at <span className="italic">Central Cafe</span>. He studied with the pianists <span className="italic">Damon Carter</span>, <span className="italic">Max Haymer</span>, <span className="italic">Plamen Karadonev</span>, and <span className="italic">Yoko Miwa</span>.
+              By eleven he was performing around Boston alongside seasoned musicians. As a high-school senior, he was named Most Valuable Player by the <span className="italic">Massachusetts Association of Jazz Education</span>. He went on to Berklee College of Music on a full scholarship, studying with the pianists <span className="italic">Damon Carter</span>, <span className="italic">Max Haymer</span>, <span className="italic">Plamen Karadonev</span>, and <span className="italic">Yoko Miwa</span>.
             </p>
 
             <p className="mt-8">
-              His biggest influence is <span className="italic">Chick Corea</span>. They met once, backstage.
+              He has never lived inside a single style. Classical, jazz, pop — he moves between them the way a writer changes voice, listening less for a genre than for the truth in a song.
+            </p>
+
+            <p className="mt-8">
+              His north star is <span className="italic">Chick Corea</span>. The two met once, backstage, where Corea left him with a line he has carried ever since.
             </p>
           </article>
+        </div>
+      </section>
+
+      {/* The quote — Corea, a moment */}
+      <section className="bg-charcoal text-ivory py-24 md:py-32">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+          <blockquote>
+            <p className="font-display italic text-3xl sm:text-5xl lg:text-[56px] leading-[1.15] text-ivory">
+              &ldquo;This world needs<br />more pianists like us.&rdquo;
+            </p>
+            <footer className="mt-10">
+              <span className="block h-px w-12 bg-bronze-light mx-auto mb-5" />
+              <span className="font-sans text-[11px] tracking-[0.22em] uppercase text-ivory/60">
+                Chick Corea, to Alexander
+              </span>
+            </footer>
+          </blockquote>
         </div>
       </section>
 
@@ -63,19 +84,15 @@ export default function Bio() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <article className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8] space-y-8">
             <p>
-              In 2023 the Massachusetts Association of Jazz Education named him its <span className="italic">Most Valuable Player</span>.
+              Today, based in Los Angeles, he performs as a soloist and composes for the screen. He also teaches — privately, across the Westside — handing down what was handed to him: not just how to play the notes, but how to mean them.
             </p>
 
             <p>
-              He performs, and writes for the stage and screen. Mostly he works in jazz — music made in the moment.
-            </p>
-
-            <p>
-              He is also the founder of <a href="https://xhojamusicagency.com" className="text-bronze hover:text-bronze-light underline decoration-rule underline-offset-4">Xhoja Music Agency</a>, a Boston music-booking agency that places live music — solo pianists, jazz ensembles, classical quartets, and DJs — into hotels, weddings, churches, senior communities, and private events across the Greater Boston metro and South Shore.
+              For Alexander, music was never about getting it right. It is about getting it <span className="italic">true</span> — finding, in the space between one note and the next, something honest enough to still a room.
             </p>
 
             <p className="text-graphite italic">
-              The thread through all of it stays the same: music that means something.
+              That has always been the whole of it. The rest is just practice.
             </p>
           </article>
         </div>
@@ -90,7 +107,7 @@ export default function Bio() {
           <ul className="space-y-5 font-serif text-charcoal/85 text-[18px] leading-[1.6]">
             {[
               'Full Scholarship — Berklee College of Music',
-              'Most Valuable Player — Massachusetts Association of Jazz Education (2023)',
+              'Most Valuable Player — Massachusetts Association of Jazz Education',
             ].map((honor) => (
               <li key={honor} className="grid grid-cols-[auto_1fr] gap-4 items-baseline">
                 <span className="text-bronze">·</span>
