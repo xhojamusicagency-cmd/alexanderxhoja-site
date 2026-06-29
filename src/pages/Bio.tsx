@@ -40,23 +40,23 @@ export default function Bio() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <article className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8]">
             <p className="first-letter:font-display first-letter:text-[88px] first-letter:leading-[0.85] first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:text-bronze">
-              Alexander Xhoja sat down at the piano at five years old and started making things up. Before he could read a note, he could hear one — and answer it. That instinct — the pull to improvise, to find the music in the moment instead of on the page — has been the center of everything he plays ever since.
+              Alexander Xhoja fell in love with the piano at five years old. His father, a music teacher, gave him his first lessons — and almost from the first note, it felt less like learning an instrument than finding a part of himself.
             </p>
 
             <p className="mt-10">
-              He learned the way his heroes had: by ear, by feel, chasing a sound until it was his own. Formal training came later, and with it the craft to carry the instinct — but the heart of his playing never changed. He listens, and he answers. No two performances are ever quite the same, because no two moments are.
+              He grew up chasing the sound of his heroes — <span className="italic">Chick Corea</span>, <span className="italic">Keith Jarrett</span> — learning by ear, by feel, until the music was his own: found in the moment rather than on the page. He began gigging young, already dreaming of the beautiful rooms he hoped one day to play.
             </p>
 
             <p className="mt-8">
-              By eleven he was performing around Boston alongside seasoned musicians. As a high-school senior, he was named Most Valuable Player by the <span className="italic">Massachusetts Association of Jazz Education</span>. He went on to Berklee College of Music on a full scholarship, studying with the pianists <span className="italic">Damon Carter</span>, <span className="italic">Max Haymer</span>, <span className="italic">Plamen Karadonev</span>, and <span className="italic">Yoko Miwa</span>.
+              By middle school he was studying with Berklee piano professors — <span className="italic">Damon Carter</span>, <span className="italic">Max Haymer</span>, <span className="italic">Plamen Karadonev</span>, and <span className="italic">Yoko Miwa</span>. By eleven he was performing around Boston alongside seasoned musicians. As a high-school senior he was named Most Valuable Player by the <span className="italic">Massachusetts Association of Jazz Education</span>, and went on to Berklee College of Music on a full scholarship.
             </p>
 
             <p className="mt-8">
-              He has never lived inside a single style. Classical, jazz, pop — he moves between them the way a writer changes voice, listening less for a genre than for the truth in a song.
+              He has never lived inside a single style. Classical, jazz, pop — he moves between them the way a storyteller changes voice, listening less for a genre than for the truth in a song.
             </p>
 
             <p className="mt-8">
-              His north star is <span className="italic">Chick Corea</span>. The two met once, backstage, where Corea left him with a line he has carried ever since.
+              Of all of them, Chick Corea looms largest. The two met once, backstage, where Corea left him with a line he has carried ever since.
             </p>
           </article>
         </div>
@@ -84,15 +84,15 @@ export default function Bio() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <article className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8] space-y-8">
             <p>
-              Today, based in Los Angeles, he performs as a soloist and writes his own music. He also teaches — privately, across the Westside — handing down what was handed to him: not just how to play the notes, but how to mean them.
+              His mission has held steady since he was five: to create, to inspire, and to tell his story through music. Today, based in Los Angeles, he performs as a soloist and writes his own music — and he teaches, privately, across the Westside, handing down what his father handed to him: not only how to play the notes, but how to mean them.
             </p>
 
             <p>
-              For Alexander, music was never about getting it right. It is about getting it <span className="italic">true</span> — finding, in the space between one note and the next, something honest enough to still a room.
+              On stage, he asks one thing of himself: to be honest — to play what is true in the moment, and let the room feel it. Music is the language he was raised in, and it means everything to him.
             </p>
 
             <p className="text-graphite italic">
-              That has always been the whole of it. The rest is just practice.
+              The rest is just practice.
             </p>
           </article>
         </div>

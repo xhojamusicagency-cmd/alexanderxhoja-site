@@ -173,7 +173,7 @@ export default function Home() {
               </h2>
               <div className="h-px w-16 bg-bronze mb-10" />
               <p className="font-serif text-[19px] sm:text-[21px] text-charcoal/85 leading-[1.75] mb-6">
-                Alexander Xhoja sat down at the piano at five and started improvising — finding the music by ear, before he could read a note. He went on to Berklee College of Music on a full scholarship, and today he performs and teaches across Los Angeles.
+                Alexander Xhoja fell in love with the piano at five — his father, a music teacher, gave him his first lessons. He learned by ear, went on to Berklee College of Music on a full scholarship, and today performs and teaches across Los Angeles.
               </p>
               <p className="font-serif italic text-[18px] text-graphite leading-[1.7] mb-10 max-w-md">
                 His playing moves across classical, jazz, and pop.
