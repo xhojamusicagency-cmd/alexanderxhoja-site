@@ -23,7 +23,7 @@ export default function Contact() {
     const eventDate = (formData.get('event_date') as string) || 'TBD';
     const message = (formData.get('message') as string) || '';
 
-    const recipient = inquiryType === 'Private Lessons' ? 'pianowithalexander@gmail.com' : 'alexanderxhoja@gmail.com';
+    const recipient = 'pianowithalexander@gmail.com';
     const subject = `${inquiryType} — ${name}`;
     const body =
       `Name:  ${name}\n` +
@@ -128,7 +128,7 @@ export default function Contact() {
 
             {status === 'error' && (
               <p className="text-red-700/80 font-serif italic text-sm mt-2">
-                Something went wrong. Email me directly: <a href="mailto:alexanderxhoja@gmail.com" className="text-bronze hover:text-bronze-light underline">alexanderxhoja@gmail.com</a>
+                Something went wrong. Email me directly: <a href="mailto:pianowithalexander@gmail.com" className="text-bronze hover:text-bronze-light underline">pianowithalexander@gmail.com</a>
               </p>
             )}
           </form>
@@ -140,8 +140,8 @@ export default function Contact() {
             Or reach out directly
           </p>
           <p className="font-serif text-charcoal text-[20px]">
-            <a href="mailto:alexanderxhoja@gmail.com" className="hover:text-bronze transition-colors">
-              alexanderxhoja@gmail.com
+            <a href="mailto:pianowithalexander@gmail.com" className="hover:text-bronze transition-colors">
+              pianowithalexander@gmail.com
             </a>
           </p>
           <p className="font-serif text-charcoal text-[20px] mt-2">
