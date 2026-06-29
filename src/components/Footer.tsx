@@ -32,8 +32,8 @@ export default function Footer() {
             <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-5">Connect</p>
             <ul className="space-y-3 font-serif text-charcoal/80 text-[15px]">
               <li>
-                <a href="mailto:alexanderxhoja@gmail.com" className="hover:text-bronze transition-colors">
-                  alexanderxhoja@gmail.com
+                <a href="mailto:pianowithalexander@gmail.com" className="hover:text-bronze transition-colors">
+                  pianowithalexander@gmail.com
                 </a>
               </li>
               <li>
