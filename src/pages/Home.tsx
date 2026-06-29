@@ -23,7 +23,7 @@ const REEL = [
 export default function Home() {
   usePageTitle(
     undefined,
-    'Alexander Xhoja — a Los Angeles pianist, composer, and private piano teacher. Performances and lessons across the Westside.'
+    'Alexander Xhoja — a Los Angeles pianist, composer, and private piano teacher. Performances and lessons across the Valley.'
   );
 
   return (

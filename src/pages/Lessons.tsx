@@ -34,12 +34,12 @@ const HEAR = [
   { title: 'Mambo Influenciado', context: 'Solo arrangement', youtubeId: 'K5Tq02Us8iM' },
 ];
 
-const areas = ['Beverly Hills', 'Brentwood', 'Bel-Air', 'Santa Monica', 'Pacific Palisades', 'Westwood', 'Studio City', 'Encino'];
+const areas = ['Toluca Lake', 'Studio City', 'Burbank', 'North Hollywood', 'Sherman Oaks', 'Valley Village', 'Encino', 'Los Feliz'];
 
 export default function Lessons() {
   usePageTitle(
     'Private Piano Lessons in Los Angeles',
-    'Study privately with Alexander Xhoja — a working concert pianist and Berklee full-scholarship graduate offering in-home piano lessons across LA’s Westside. A small studio, a few seats each season.'
+    'Study privately with Alexander Xhoja — a working concert pianist and Berklee full-scholarship graduate offering in-home piano lessons across LA’s Valley. A small studio, a few seats each season.'
   );
 
   const [status, setStatus] = useState<Status>('idle');
@@ -93,14 +93,14 @@ export default function Lessons() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
             <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-7">
-              Private Piano Studio · Westside Los Angeles
+              Private Piano Studio · Toluca Lake & the Valley
             </p>
             <h1 className="font-display text-[56px] sm:text-[82px] leading-[0.93] tracking-[-0.02em] font-light text-charcoal mb-8">
               Piano lessons<br />with Alexander.
             </h1>
             <div className="h-px w-20 bg-bronze mb-8" />
             <p className="font-serif text-[19px] sm:text-[21px] leading-[1.6] text-graphite max-w-xl mb-10">
-              A working concert pianist — Berklee-trained on a full scholarship. Now <span className="text-charcoal">Alexander Xhoja</span> brings it to your piano, one-on-one — real musicianship, all ages and levels, across the Westside. A few new students each season.
+              A working concert pianist — Berklee-trained on a full scholarship. Now <span className="text-charcoal">Alexander Xhoja</span> brings it to your piano, one-on-one — real musicianship, all ages and levels, across the Valley. A few new students each season.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
               <a href="#book" className="inline-block text-center bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors">
@@ -111,7 +111,7 @@ export default function Lessons() {
               </a>
             </div>
             <p className="font-sans text-[12px] tracking-[0.06em] text-graphite/80 mt-6">
-              All ages &amp; levels · in your home across the Westside
+              All ages &amp; levels · in your home across the Valley
             </p>
           </div>
           <div className="lg:col-span-5">

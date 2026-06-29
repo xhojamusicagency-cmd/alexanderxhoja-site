@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 const BASE_TITLE = 'Alexander Xhoja';
 const DEFAULT_DESCRIPTION =
-  'Alexander Xhoja — a Los Angeles pianist, composer, and private piano teacher, and a Berklee College of Music graduate. Concert performances and private lessons across the Westside.';
+  'Alexander Xhoja — a Los Angeles pianist, composer, and private piano teacher, and a Berklee College of Music graduate. Concert performances and private lessons across the Valley.';
 
 /**
  * Sets the document title and meta description for a page.
