@@ -7,7 +7,7 @@
 //
 // Until a key is set below, submitToWeb3Forms() returns false and callers
 // fall back to a pre-filled mailto: draft, so a lead is never silently lost.
-export const WEB3FORMS_ACCESS_KEY = '';
+export const WEB3FORMS_ACCESS_KEY = '93b352d8-9657-47b3-9edb-081888ecbb3f';
 
 export async function submitToWeb3Forms(fields: Record<string, string>): Promise<boolean> {
   if (!WEB3FORMS_ACCESS_KEY) return false;
