@@ -84,7 +84,7 @@ export default function Bio() {
         <div className="max-w-2xl mx-auto px-6 lg:px-8">
           <article className="font-serif text-charcoal text-[20px] sm:text-[21px] leading-[1.8] space-y-8">
             <p>
-              His mission has held steady since he was five: to create, to inspire, and to tell his story through music. Today, based in Los Angeles, he performs as a soloist and writes his own music — and he teaches, privately, across the Hollywood Hills and the East Valley, handing down what his father handed to him: not only how to play the notes, but how to mean them.
+              His mission has held steady since he was five: to create, to inspire, and to tell his story through music. Today, based in Los Angeles, he performs as a soloist and writes his own music — and he teaches, privately, across greater Los Angeles, handing down what his father handed to him: not only how to play the notes, but how to mean them.
             </p>
 
             <p>

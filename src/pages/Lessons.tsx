@@ -34,12 +34,18 @@ const HEAR = [
   { title: 'Mambo Influenciado', context: 'Solo arrangement', youtubeId: 'K5Tq02Us8iM' },
 ];
 
-const areas = ['Hollywood Hills', 'Los Feliz', 'Universal City', 'Studio City', 'Burbank', 'North Hollywood', 'Valley Village', 'Sherman Oaks', 'Toluca Lake', 'Encino'];
+const areas = ['Beverly Hills', 'Bel-Air', 'Brentwood', 'Pacific Palisades', 'Hancock Park', 'Hollywood Hills', 'Los Feliz', 'Studio City', 'Sherman Oaks', 'Encino', 'Calabasas', 'Toluca Lake'];
+
+const packages = [
+  { label: 'Single lesson', price: '$110', unit: 'per lesson', highlight: false },
+  { label: '2-lesson bundle', price: '$100', unit: 'per lesson', highlight: false },
+  { label: '4-lesson bundle · best value', price: '$90', unit: 'per lesson', highlight: true },
+];
 
 export default function Lessons() {
   usePageTitle(
     'Private Piano Lessons in Los Angeles',
-    'Study privately with Alexander Xhoja — a working concert pianist and Berklee full-scholarship graduate offering in-home piano lessons across the Hollywood Hills and the East Valley. A small studio, a few seats each season.'
+    'Study privately with Alexander Xhoja — a working concert pianist and Berklee full-scholarship graduate offering in-home piano lessons across greater Los Angeles. A small studio, a few seats each season.'
   );
 
   const [status, setStatus] = useState<Status>('idle');
@@ -62,7 +68,7 @@ export default function Lessons() {
     const subject = `Piano lesson inquiry — ${name}`;
     const body =
       `Hi Alexander,\n\n` +
-      `I'd like to set up a welcome lesson.\n\n` +
+      `I'd like to set up piano lessons.\n\n` +
       `Name:  ${name}\n` +
       `Phone: ${phone}\n` +
       `Email: ${email || 'not provided'}\n\n` +
@@ -93,25 +99,25 @@ export default function Lessons() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
             <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-7">
-              Private Piano Studio · Hollywood Hills & the East Valley
+              Private Piano Studio · Greater Los Angeles
             </p>
             <h1 className="font-display text-[56px] sm:text-[82px] leading-[0.93] tracking-[-0.02em] font-light text-charcoal mb-8">
               Piano lessons<br />with Alexander.
             </h1>
             <div className="h-px w-20 bg-bronze mb-8" />
             <p className="font-serif text-[19px] sm:text-[21px] leading-[1.6] text-graphite max-w-xl mb-10">
-              A working concert pianist — Berklee-trained on a full scholarship. Now <span className="text-charcoal">Alexander Xhoja</span> brings it to your piano, one-on-one — real musicianship, all ages and levels, across the Hollywood Hills and the East Valley. A few new students each season.
+              A working concert pianist — Berklee-trained on a full scholarship. Now <span className="text-charcoal">Alexander Xhoja</span> brings it to your piano, one-on-one — real musicianship, all ages and levels, in your home across greater Los Angeles. A few new students each season.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
               <a href="#book" className="inline-block text-center bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors">
-                Request your welcome lesson
+                Book your first lesson
               </a>
               <a href="#listen" className="inline-block text-center font-sans text-[12px] tracking-label uppercase px-9 py-4 border border-charcoal/25 text-charcoal hover:border-bronze hover:text-bronze transition-colors">
                 Hear him play
               </a>
             </div>
             <p className="font-sans text-[12px] tracking-[0.06em] text-graphite/80 mt-6">
-              All ages &amp; levels · in your home across the Hollywood Hills & the East Valley
+              All ages &amp; levels · in your home, anywhere across greater LA
             </p>
           </div>
           <div className="lg:col-span-5">
@@ -119,6 +125,19 @@ export default function Lessons() {
               <img src="/alexander-xhoja-concert.jpg" alt="Alexander Xhoja performing at a Steinway grand under concert lighting" className="w-full h-full object-cover object-[32%_center]" />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ===================== AREAS — high, so visitors see it fast ===================== */}
+      <section className="bg-ivory-deep py-14 md:py-16 border-y border-rule">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 text-center">
+          <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-8">In-home lessons across greater Los Angeles</p>
+          <ul className="flex flex-wrap justify-center gap-x-8 gap-y-3 max-w-4xl mx-auto">
+            {areas.map((a) => (
+              <li key={a} className="font-display italic text-[20px] sm:text-[24px] text-charcoal">{a}</li>
+            ))}
+          </ul>
+          <p className="font-serif italic text-graphite text-[15px] mt-6">…and nearby — just ask.</p>
         </div>
       </section>
 
@@ -204,32 +223,33 @@ export default function Lessons() {
         </div>
       </section>
 
-      {/* ===================== THE OFFER ===================== */}
+      {/* ===================== PACKAGES / RATES ===================== */}
       <section className="bg-ivory py-20 md:py-28">
-        <div className="max-w-2xl mx-auto px-6 lg:px-8 text-center">
-          <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-7">Begin</p>
-          <h2 className="font-display text-[40px] sm:text-[52px] leading-[1.05] font-light text-charcoal mb-6">
-            Start with a<br />$60 welcome lesson.
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16">
+          <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-4 text-center">Lessons &amp; rates</p>
+          <h2 className="font-display text-[40px] sm:text-[52px] leading-[1.05] font-light text-charcoal mb-12 text-center">
+            Simple rates.<br />Better with a bundle.
           </h2>
-          <p className="font-serif text-[19px] sm:text-[20px] leading-[1.7] text-graphite mb-10">
-            We play, we talk, and I build your plan — no commitment. Weekly lessons follow at <span className="text-charcoal">$100</span>, or <span className="text-charcoal">$130</span> fully in-home. A standing weekly seat is how real progress happens — and there are only so many.
-          </p>
-          <a href="#book" className="inline-block bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors">
-            Request your welcome lesson →
-          </a>
-        </div>
-      </section>
-
-      {/* ===================== AREAS ===================== */}
-      <section className="bg-ivory-deep py-16 md:py-20">
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 text-center">
-          <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-8">Where I teach</p>
-          <ul className="flex flex-wrap justify-center gap-x-8 gap-y-3 max-w-3xl mx-auto">
-            {areas.map((a) => (
-              <li key={a} className="font-display italic text-[20px] sm:text-[23px] text-charcoal">{a}</li>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8 max-w-4xl mx-auto">
+            {packages.map((p) => (
+              <div
+                key={p.label}
+                className={`p-8 text-center ${p.highlight ? 'border-2 border-bronze bg-ivory-deep' : 'border border-rule'}`}
+              >
+                <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-5 min-h-[2.4em] flex items-center justify-center">{p.label}</p>
+                <p className="font-display text-[56px] leading-none text-charcoal">{p.price}</p>
+                <p className="font-serif italic text-graphite text-[15px] mt-3">{p.unit}</p>
+              </div>
             ))}
-          </ul>
-          <p className="font-serif italic text-graphite text-[15px] mt-6">…and nearby — just ask.</p>
+          </div>
+          <p className="font-serif text-graphite text-[18px] leading-[1.7] mt-10 text-center max-w-xl mx-auto">
+            Every lesson is 60 minutes, one-on-one, in your home. A standing weekly seat is how real progress happens — and there are only so many.
+          </p>
+          <div className="text-center mt-10">
+            <a href="#book" className="inline-block bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors">
+              Book your first lesson →
+            </a>
+          </div>
         </div>
       </section>
 
@@ -240,7 +260,7 @@ export default function Lessons() {
             <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-7">Request your seat</p>
             <h2 className="font-display text-[40px] sm:text-[52px] leading-[1.05] font-light text-ivory mb-6">Let's begin.</h2>
             <p className="font-serif text-ivory/65 text-[18px] leading-[1.7]">
-              Send this and I'll text you back — usually within the hour — to set up your welcome lesson.
+              Send this and I'll text you back — usually within the hour — to set up your first lesson.
             </p>
           </div>
 
@@ -250,14 +270,14 @@ export default function Lessons() {
                 <>
                   <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-4">Got it — talk soon</p>
                   <p className="font-serif italic text-ivory text-[20px] leading-relaxed">
-                    Thank you — I have your request and I'll text you back, usually within the hour, to set up your welcome lesson. In a hurry? Text me at <a href={SMS} className="underline decoration-bronze-light underline-offset-4">(857) 498-8487</a>.
+                    Thank you — I have your request and I'll text you back, usually within the hour, to set up your first lesson. In a hurry? Text me at <a href={SMS} className="underline decoration-bronze-light underline-offset-4">(857) 498-8487</a>.
                   </p>
                 </>
               ) : (
                 <>
                   <p className="font-sans text-[10px] tracking-label uppercase text-bronze-light mb-4">One last tap — hit send</p>
                   <p className="font-serif italic text-ivory text-[20px] leading-relaxed">
-                    Your welcome-lesson note just opened in your email — give it a quick send and I'll text you back, usually within the hour. Rather skip it? Text me directly at <a href={SMS} className="underline decoration-bronze-light underline-offset-4">(857) 498-8487</a>.
+                    Your note just opened in your email — give it a quick send and I'll text you back, usually within the hour. Rather skip it? Text me directly at <a href={SMS} className="underline decoration-bronze-light underline-offset-4">(857) 498-8487</a>.
                   </p>
                 </>
               )}
@@ -284,7 +304,7 @@ export default function Lessons() {
                   name="about"
                   required
                   rows={3}
-                  placeholder="e.g. my 8-year-old, total beginner — Studio City. Or: me, played years ago, want to get back into it."
+                  placeholder="e.g. my 8-year-old, total beginner — Beverly Hills. Or: me, played years ago, want to get back into it."
                   className="w-full bg-transparent border-0 border-b border-ivory/25 pb-3 text-ivory font-serif text-[18px] focus:outline-none focus:border-bronze-light transition-colors resize-none placeholder:text-ivory/35 placeholder:italic"
                 />
               </div>
@@ -293,7 +313,7 @@ export default function Lessons() {
                 disabled={status === 'sending'}
                 className="w-full bg-bronze text-ivory font-sans text-[12px] tracking-label uppercase px-9 py-4 hover:bg-bronze-light transition-colors disabled:opacity-50"
               >
-                {status === 'sending' ? 'Sending…' : 'Request my welcome lesson'}
+                {status === 'sending' ? 'Sending…' : 'Request my first lesson'}
               </button>
               {status === 'error' && (
                 <p className="font-serif italic text-[15px] text-bronze-light text-center">
