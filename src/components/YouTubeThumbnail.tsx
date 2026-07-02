@@ -29,7 +29,6 @@ export default function YouTubeThumbnail({ youtubeId, alt, className }: YouTubeT
     <img
       src={src}
       alt={alt}
-      loading="lazy"
       className={className}
       onError={useFallback}
       onLoad={(e) => {
