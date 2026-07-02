@@ -54,10 +54,6 @@ export default function Gallery() {
             </figure>
           ))}
         </div>
-
-        <p className="text-center font-serif italic text-graphite text-[14px] mt-20">
-          More photographs coming soon.
-        </p>
       </section>
     </div>
   );

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import usePageTitle from '../hooks/usePageTitle';
+import YouTubeThumbnail from '../components/YouTubeThumbnail';
 
 // Curated reel of the strongest performances surfaced on the homepage
 const REEL = [
@@ -108,8 +109,8 @@ export default function Home() {
             {REEL.map((v, i) => (
               <Link key={v.youtubeId} to="/videos" className="group block">
                 <div className="relative aspect-video overflow-hidden bg-ivory-deep mb-5">
-                  <img
-                    src={`https://i.ytimg.com/vi/${v.youtubeId}/maxresdefault.jpg`}
+                  <YouTubeThumbnail
+                    youtubeId={v.youtubeId}
                     alt={v.title}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                   />

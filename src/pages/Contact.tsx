@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import usePageTitle from '../hooks/usePageTitle';
+import { submitToWeb3Forms } from '../utils/web3forms';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -7,17 +8,19 @@ export default function Contact() {
   usePageTitle('Contact & Booking', 'Get in touch with Alexander Xhoja — solo, trio, and ensemble bookings; recording sessions; collaborations; and press inquiries.');
 
   const [status, setStatus] = useState<Status>('idle');
+  const [sentVia, setSentVia] = useState<'form' | 'mailto'>('form');
   const [honeypot, setHoneypot] = useState('');
   const [mountedAt] = useState(() => Date.now());
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (honeypot) return;
     if (Date.now() - mountedAt < 3000) return;
+    setStatus('sending');
 
     const formData = new FormData(e.currentTarget);
     const name = (formData.get('name') as string) || '';
-    const email = (formData.get('email') as string) || 'not provided';
+    const email = (formData.get('email') as string) || '';
     const phone = (formData.get('phone') as string) || 'not provided';
     const inquiryType = (formData.get('inquiry_type') as string) || 'Inquiry';
     const eventDate = (formData.get('event_date') as string) || 'TBD';
@@ -27,16 +30,28 @@ export default function Contact() {
     const subject = `${inquiryType} — ${name}`;
     const body =
       `Name:  ${name}\n` +
-      `Email: ${email}\n` +
+      `Email: ${email || 'not provided'}\n` +
       `Phone: ${phone}\n` +
       `Inquiry: ${inquiryType}\n` +
       `Event date: ${eventDate}\n\n` +
       `${message}\n\n` +
       `— sent from pianowithalexander.com`;
 
+    // Primary: deliver straight to the inbox — no "open your mail app" step.
+    const fields: Record<string, string> = { subject, from_name: name, phone, message: body };
+    if (email) fields.email = email;
+    const delivered = await submitToWeb3Forms(fields);
+    if (delivered) {
+      setSentVia('form');
+      setStatus('sent');
+      return;
+    }
+
+    // Fallback: pre-filled mailto draft so an inquiry is never silently lost.
+    setSentVia('mailto');
+    setStatus('sent');
     window.location.href =
       `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setStatus('sent');
   }
 
   return (
@@ -60,10 +75,12 @@ export default function Contact() {
         {status === 'sent' ? (
           <div className="text-center py-20 border-t border-b border-rule">
             <p className="font-sans text-[10px] tracking-label uppercase text-bronze mb-4">
-              One last tap — hit send
+              {sentVia === 'form' ? 'Message sent' : 'One last tap — hit send'}
             </p>
             <p className="font-serif italic text-charcoal text-[20px] leading-relaxed">
-              Your message just opened in your email app — give it a quick send and Alexander will respond within 2 business days.
+              {sentVia === 'form'
+                ? 'Thank you — your message is on its way. Alexander will respond within 2 business days.'
+                : 'Your message just opened in your email app — give it a quick send and Alexander will respond within 2 business days.'}
             </p>
           </div>
         ) : (

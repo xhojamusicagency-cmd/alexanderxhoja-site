@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import usePageTitle from '../hooks/usePageTitle';
+import YouTubeThumbnail from '../components/YouTubeThumbnail';
 
 interface Video {
   title: string;
@@ -84,9 +85,8 @@ export default function Videos() {
               <div className={`relative aspect-video overflow-hidden bg-ivory-deep ${
                 i === activeIndex ? 'ring-1 ring-bronze' : ''
               }`}>
-                <img
-                  src={`https://i.ytimg.com/vi/${v.youtubeId}/maxresdefault.jpg`}
-                  onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = `https://i.ytimg.com/vi/${v.youtubeId}/hqdefault.jpg`; }}
+                <YouTubeThumbnail
+                  youtubeId={v.youtubeId}
                   alt={v.title}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 />
